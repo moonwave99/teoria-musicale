@@ -1,0 +1,31 @@
+---
+slug: two-five-ones
+title: Two-Five-Ones
+authors: [diego]
+tags: [jazz]
+---
+Let's play a `ii/V/I` in `C`:
+
+<Sequence>
+  <Part notes="D3 F3 A3 C4" label="ii (Dm7)" arpeggio/>
+  <Part notes="G3 B3 D4 F4" label="V (G7)" arpeggio/>
+  <Part notes="C3 E3 G3 B3" label="I (CMaj7)" rake/>
+</Sequence>
+
+The voicings are very clumsy! Let's arrange them a bit better:
+
+<Sequence>
+  <Part notes="D2 A2, F3 C4" label="ii (Dm7)"/>
+  <Part notes="G2 D3, B3 F4" label="V (G7)"/>
+  <Part notes="C3 G3, B3 E4" label="I (CMaj7)"/>
+</Sequence>  
+
+The left hand is not particularly interesting, it's just parallel fifths!
+
+Let's try instead:
+
+<Sequence speed="rake">
+  <Part notes="D2, F3 A3 C4 E4" label="ii (Dm7)"/>
+  <Part notes="G2, F3 A3 B3 E4" label="V (G7)"/>
+  <Part notes="C3, E3 A3 B3 D4" label="I (CMaj7)"/>
+</Sequence>  

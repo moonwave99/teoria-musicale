@@ -1,0 +1,315 @@
+---
+slug: building-triads
+title: Building Triads
+authors: [diego]
+tags: [triads]
+---
+One should first interiorise how to play any triad. Since triads are made of thirds, let's build them.
+
+<!--truncate-->
+
+## Types of thirds
+
+All pair of notes that are three note names apart is a third (e.g. `A-C`, `E-Gb`).
+The ones needed for building (most) chords in triadic harmony are simply:
+
+- **Major**: 3M (e.g. `C-E`);
+- **Minor**: 3m (e.g. `F-Ab`).
+
+The combinations on the keyboard may look a very huge number, but we can reduce them down to a very small amount.
+Since the piano is a mono-dimensional instrument with keys of just two colors, the permutations will just be:
+
+- white to white (WW);
+- white to black (WB);
+- black to white (BW);
+- black to black (BB).
+
+Let's check the major triads first:
+
+<Sequence speed="arpeggio">
+  <Part notes="C E" label="C" />
+  <Part notes="Db F" label="Db" />
+  <Part notes="D F#" label="D" />
+  <Part notes="Eb G" label="Eb" />
+  <Part notes="E G#" label="E" />
+  <Part notes="F A" label="F" />
+  <Part notes="F# A#" label="F#" />
+  <Part notes="G B" label="G" />
+  <Part notes="Ab C" label="Ab" />
+  <Part notes="A C#" label="A" />
+  <Part notes="Bb D" label="Bb" />
+  <Part notes="B D#" label="B" />
+</Sequence>
+
+The groups are:
+
+<Table
+  headers={['Type', 'Count', 'Entries']}
+  rows={[
+  ['WW', 3, 'C-E, F-A, G-B'],
+  ['WB', 4, 'D-F#, E-G#, A-C#, B-D#'],
+  ['BW', 4, 'Db-F, Eb-G, Ab-C, Bb-D'],
+  ['BB', 1, 'F#-A#']
+]}/>
+
+Let's play them in order:
+
+<Sequence speed="arpeggio">
+  <Part notes="C E" label="C" />
+  <Part notes="F A" label="F" />
+  <Part notes="G B" label="G" />
+
+  <Part notes="D F#" label="D" />
+  <Part notes="E G#" label="E" />
+  <Part notes="A C#" label="A" />  
+  <Part notes="B D#" label="B" />
+
+  <Part notes="Db F" label="Db" />
+  <Part notes="Eb G" label="Eb" />  
+  <Part notes="Ab C" label="Ab" />
+  <Part notes="Bb D" label="Bb" />
+
+  <Part notes="F# A#" label="F#" />
+</Sequence>
+
+For the minor triads:
+
+<Sequence speed="arpeggio">
+  <Part notes="C Eb" label="C" />
+  <Part notes="C# E" label="C#" />
+  <Part notes="D F" label="D" />
+  <Part notes="Eb Gb" label="Eb" />
+  <Part notes="E G" label="E" />
+  <Part notes="F Ab" label="F" />
+  <Part notes="F# A" label="F#" />
+  <Part notes="G Bb" label="G" />
+  <Part notes="G# B" label="G#" />
+  <Part notes="A C" label="A" />
+  <Part notes="Bb Db" label="Bb" />
+  <Part notes="B D" label="B" />
+</Sequence>
+
+The groups are:
+
+<Table
+  headers={['Type', 'Count', 'Entries']}
+  rows={[
+  ['WW', 4, 'D-F, E-G, A-C, B-D'],
+  ['WB', 3, 'C-Eb, F-Ab, G-Bb'],
+  ['BW', 3, 'C#-E, F#-A, G#-B'],
+  ['BB', 2, 'Eb-Gb, Bb-Db']
+]}/>
+
+Arranged by group:
+
+<Sequence speed="arpeggio">
+  <Part notes="D F" label="D" />
+  <Part notes="E G" label="E" />
+  <Part notes="A C" label="A" />
+  <Part notes="B D" label="B" />
+
+  <Part notes="C Eb" label="C" />
+  <Part notes="F Ab" label="F" />
+  <Part notes="G Bb" label="G" />
+
+  <Part notes="C# E" label="C#" />
+  <Part notes="F# A" label="F#" />
+  <Part notes="G# B" label="G#" />
+
+  <Part notes="Eb Gb" label="Eb" />
+  <Part notes="Bb Db" label="Bb" />
+</Sequence>
+
+## Stacking thirds
+
+We know how to build triads:
+
+<Table
+  headers={['Type', 'Intervals', 'Examples']}
+  rows={[
+    ['Major', '3M + 3m', 'C-E-G, Eb-G-Bb'],
+    ['Minor', '3m + 3M', 'C-Eb-G, Eb-Gb-Bb'],
+    ['Dimished', '3m + 3m', 'C-Eb-Gb, Eb-Gb-Bbb'],
+    ['Augmented', '3M + 3M', 'C-E-G#, Eb-G-B'],
+]}/>
+
+If we were to memorise all root-type combinations we would end up with 12 * 4 = 48 (!) triads: we will see how we can reduce the complexity a lot.
+
+Let's arrange our work in subgroups:
+
+- major / root on white keys;
+- major / root on black keys;
+- minor / root on white keys;
+- minor / root on black keys;
+- diminshed;
+- augmented.
+
+### Major / root on white keys
+
+<Sequence speed="arpeggio">
+  <Part notes="C E G" label="C major" />
+  <Part notes="D F# A" label="D major" />
+  <Part notes="E G# B" label="E major" />
+  <Part notes="F A C" label="F major" />
+  <Part notes="G B D" label="G major" />
+  <Part notes="A C# E" label="A major" />
+  <Part notes="B D# F#" label="B major" />
+</Sequence>
+
+We have just three shapes:
+
+<Table
+  headers={['Shape', 'Triads']}
+  rows={[
+    ['white / white / white', 'C, F, G'],
+    ['white / black / white', 'D, E, A'],
+    ['white / black / black', 'B'],
+]}/>
+
+That's already more than a 50% reduction of the cognitive load!
+
+Observe than they are respectively the `1-4-5` of `C` and `A`, plus the `B` singleton.
+
+### Major / root on black keys
+
+How many shapes here?
+
+<Sequence speed="arpeggio">
+  <Part notes="Db F Ab" label="Db major" />
+  <Part notes="Eb G Bb" label="Eb major" />
+  <Part notes="Gb Bb Db" label="Gb major" />
+  <Part notes="Ab C Eb" label="Ab major" />
+  <Part notes="Bb D F" label="Bb major" />
+</Sequence>
+
+Three:
+
+<Table
+  headers={['Shape', 'Triads']}
+  rows={[
+    ['black / white / black', 'Db, Eb, Ab'],
+    ['black / black / black', 'Gb'],
+    ['black / white / white', 'Bb'],
+]}/>
+
+### Major triads - review
+
+Catching up, we have 6 shapes for all 12 major chords - exactly one half!
+
+Let's sort everything by occurrence:
+
+<Table
+  headers={['Shape', 'Triads']}
+  rows={[
+    ['white / white / white', 'C, F, G'],
+    ['white / black / white', 'D, E, A'],    
+    ['black / white / black', 'Db, Eb, Ab'],
+    ['white / black / black', 'B'],    
+    ['black / black / black', 'Gb'],
+    ['black / white / white', 'Bb'],
+]}/>
+
+That's three equally common shapes, plus three singletons.
+
+### Minor / root on white keys
+
+<Sequence speed="arpeggio">
+  <Part notes="A C E" label="A minor" />
+  <Part notes="D F A" label="D minor" />
+  <Part notes="E G B" label="E minor" />
+  <Part notes="C Eb G" label="C minor" />
+  <Part notes="F Ab C" label="F minor" />
+  <Part notes="G Bb D" label="G minor" />
+  <Part notes="B D F#" label="B minor" />  
+</Sequence>
+
+We have just three shapes:
+
+<Table
+  headers={['Shape', 'Triads']}
+  rows={[
+    ['white / white / white', 'A, D, E'],
+    ['white / black / white', 'C, F, G'],
+    ['white / white / black', 'B'],
+]}/>
+
+Observe the harmony similary with the major ones - `1-4-5` of `C` and `A` and the `B` outsider. Sorry mr. `B`!
+
+### Minor / root on black keys
+
+How many shapes here?
+
+<Sequence speed="arpeggio">
+  <Part notes="C# E G#" label="C# minor" />
+  <Part notes="Eb Gb Bb" label="Eb minor"/>
+  <Part notes="F# A C#" label="F# minor" />
+  <Part notes="G# B D#" label="G# minor" />
+  <Part notes="Bb Db F" label="Bb minor" />
+</Sequence>
+
+Three:
+
+<Table
+  headers={['Shape', 'Triads']}
+  rows={[
+    ['black / white / black', 'C#, F#, G#'],
+    ['black / black / black', 'Eb'],
+    ['black / black / white', 'Bb'],
+]}/>
+
+### Minor triads - review
+
+Even minor triads have 6 shapes overall. Sorted they look like:
+
+<Table
+  headers={['Shape', 'Triads']}
+  rows={[
+    ['white / white / white', 'A, D, E'],
+    ['white / black / white', 'C, F, G'],
+    ['black / white / black', 'C#, F#, G#'],
+    ['white / white / black', 'B'],    
+    ['black / black / black', 'Eb'],
+    ['black / black / white', 'Bb'],    
+]}/>
+
+## Diminished triads
+
+Due to internal octave simmetry and enharnonic notes, we have relatively few triads of this kind:
+
+<Sequence speed="arpeggio">
+  <Part notes="B D F" label="B dim" octave={2}/>
+  <Part notes="D F Ab" label="D dim"/>
+  <Part notes="F Ab Cb4" label="F dim"/>
+  <Part notes="G# B D" label="G# dim"/>
+
+  <Part notes="C Eb Gb" label="C dim"/>
+  <Part notes="D# F# A" label="D# dim"/>
+  <Part notes="F# A C" label="F# dim"/>
+  <Part notes="A C Eb" label="A dim"/>
+
+  <Part notes="C# E G" label="C# dim"/>
+  <Part notes="E G Bb" label="E dim"/>
+  <Part notes="G Bb Db" label="G dim"/>
+  <Part notes="A# C# E" label="A# dim"/>
+</Sequence>
+
+For dimished triads it's much easier to learn the **full diminished** arpeggios (made of three stacked minor thirds), since there are just three of them.
+
+## Augmented triads
+
+Same as above, they repeat like:
+
+<Sequence speed="arpeggio">
+  <Part notes="C E G#" label="C aug"/>
+  <Part notes="Db F A" label="Db aug"/>
+  <Part notes="D F# A#" label="D aug"/>
+  <Part notes="Eb G B" label="Eb aug"/>
+  <Part notes="E G# C" label="E aug"/>
+</Sequence>
+
+Observe like the `E aug` is an inversion of `C aug` (even though the `C` should be marked as `B#`, but let's make real music instead of splitting hairs!).
+
+## What have we learned
+
+We boiled down 48 entries to 6 + 6 + 3 + 4 = 19, not bad! Let's not forget that some shapes are relatively less used (augmented chords, I am looking at you!),
+and it's not a crime to let them a little in the background of our memory. The other three types are crucial for building **seventh cords**, so make sure to ingrain them in your fingers.
