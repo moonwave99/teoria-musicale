@@ -23,8 +23,6 @@ function getSpeed({ arpeggio, rake }, mainSpeed) {
 export function Sequence({ split = false, speed, children, startOctave }) {
   const [isPlaying, setPlaying] = useState(false);
   const [currentMeasure, setCurrentMeasure] = useState(-1);
-  const [showNotation, setShowNotation] = useState(true);
-  const [showPianos, setShowPianos] = useState(true);
   const [showSplit, setShowSplit] = useState(split);
 
   if (!children.length) {
@@ -67,14 +65,6 @@ export function Sequence({ split = false, speed, children, startOctave }) {
     playAll();
   }
 
-  function toggleNotation() {
-    setShowNotation(!showNotation);
-  }
-
-  function togglePianos() {
-    setShowPianos(!showPianos);
-  }
-
   function toggleSplit() {
     setShowSplit(!showSplit);
   }
@@ -83,17 +73,15 @@ export function Sequence({ split = false, speed, children, startOctave }) {
     <div
       className={cx("sequence alert alert--secondary", {
         "sequence-is-playing": isPlaying,
-        "sequence-show-notation": showNotation,
-        "sequence-show-pianos": showPianos,
         "sequence-show-split": showSplit
       })}
     >
+      <Notation
+        parts={parts}
+        currentMeasure={currentMeasure}
+        onNoteClick={onNoteClick}
+      />
       <div className="sequence-content">
-        <Notation
-          parts={parts}
-          currentMeasure={currentMeasure}
-          onNoteClick={onNoteClick}
-        />
         <div className="parts">
           {showSplit ? (
             children.map((x, i) => (
@@ -116,11 +104,12 @@ export function Sequence({ split = false, speed, children, startOctave }) {
             <Piano showActions={false} {...parts[currentMeasure]} />
           )}
         </div>
+        <SequenceActions
+          showSplit={parts.length > 1}
+          actions={{ togglePlayback, toggleSplit }}
+          isPlaying={isPlaying}
+        />
       </div>
-      <SequenceActions
-        actions={{ togglePlayback, toggleNotation, togglePianos, toggleSplit }}
-        isPlaying={isPlaying}
-      />
     </div>
   );
 }

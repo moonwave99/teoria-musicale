@@ -29,10 +29,6 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-.piano-wrapper {
-  margin-bottom: 2rem;
-}
-
 .piano-content {
   display: flex;
 }
@@ -52,6 +48,11 @@
   margin-bottom: 3rem;
 }
 
+.sequence .sequence-content {
+  display: flex;
+  align-items: center;
+}
+
 .sequence .paino {
   transition: opacity 0.2s ease-in-out;
 }
@@ -64,21 +65,26 @@
   opacity: 0.6;
 }
 
-.sequence .notation {
-  margin-bottom: 2rem;
+.sequence.sequence-show-split .piano-wrapper {
+  margin-bottom: 1rem;
 }
 
-.sequence .notation,
-.sequence .parts {
-  display: none;
+.sequence .notation {
+  margin-bottom: 2rem;
 }
 
 .sequence.sequence-show-notation .notation {
   display: block;
 }
 
-.sequence.sequence-show-pianos .parts {
+.sequence.sequence-show-split .parts {
   display: block;
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+.sequence-actions {
+  margin-left: 1rem;
 }
 
 .sequence-actions .action:not(:last-child) {
