@@ -104,3 +104,13 @@ g.abcjs-note.is-playing {
   line-height: 1.5;
   padding: 0.25rem;
 }
+
+.table {
+  display: table;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.table thead tr th {
+  text-align: left;
+}
