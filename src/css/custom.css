@@ -95,3 +95,12 @@ g.abcjs-note.is-playing {
   --paino-white-key-width: 1.2rem;
   --paino-black-key-width: 0.8rem;
 }
+
+.tag {
+  background-color: var(--ifm-color-primary);
+  border-radius: 0.25rem;
+  color: white;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 0.25rem;
+}
