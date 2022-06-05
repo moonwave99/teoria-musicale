@@ -28,7 +28,6 @@ export function Sequence({ split = false, speed, children, startOctave }) {
   if (!children.length) {
     children = [children];
   }
-
   const parts = children.map(({ props }) => ({
     ...props,
     notes: padSequenceWithOctave(props.notes, props.octave || startOctave)
@@ -84,14 +83,14 @@ export function Sequence({ split = false, speed, children, startOctave }) {
       <div className="sequence-content">
         <div className="parts">
           {showSplit ? (
-            children.map((x, i) => (
+            parts.map((x, i) => (
               <Piano
-                key={`${x.props.notes}-${i}`}
+                key={`${x.notes}-${i}`}
                 className={cx({
                   "is-playing": isPlaying && currentMeasure === i
                 })}
                 showActions={false}
-                {...x.props}
+                {...x}
               />
             ))
           ) : isPlaying ? (

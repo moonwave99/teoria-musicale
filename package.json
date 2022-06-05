@@ -19,7 +19,7 @@
     "@docusaurus/plugin-content-docs": "2.0.0-beta.20",
     "@docusaurus/preset-classic": "2.0.0-beta.20",
     "@mdx-js/react": "1.6.22",
-    "@moonwave99/paino": "0.1.3",
+    "@moonwave99/paino": "0.1.5",
     "@tonaljs/abc-notation": "4.6.5",
     "@tonaljs/note": "4.6.5",
     "abcjs": "6.0.2",
