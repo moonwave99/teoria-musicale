@@ -1,6 +1,6 @@
 import React from "react";
 
-import cx from "classnames";
+import cx from "clsx";
 import usePaino from "../hooks/usePaino";
 
 export default function Piano({
