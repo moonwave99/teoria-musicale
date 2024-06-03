@@ -1,0 +1,468 @@
+---
+slug: gli-intervalli
+title: Gli intervalli
+authors: [diego]
+tags: [teoria]
+---
+
+Cosa c'è di più bello di una melodia? Probabilmente saperne scrivere una!
+
+Impariamo a riconoscere e classificare le distanze tra le note innanzitutto.
+
+<Truncate/>
+
+## Definizione e primi esempi
+
+Per intervallo in musica si intende **la misura della distanza tra due note**. La distanza fisica, cioè tipo tra i tasti del piano o le posizioni della chitarra? Ma no, o almeno non proprio! Si parla di distanza in altezza, e l'unità di misura di tale distanza è **il semitono**.
+
+L'obiettivo di questo articolo è di poter pronunciare e comprendere le sequenti espressioni ad esempio:
+
+- la distanza tra Mi e La è di **cinque semitoni**;
+- la distanza tra Mi e La è di **due toni e mezzo**;
+- la distanza tra Mi e La è di **una quarta giusta**.
+
+Le prime due esprimono la distanza, la terza invece **la specie** dell'intervallo.
+
+Per farla (semi)breve, il semitono è **la distanza tra un tasto bianco e un tasto nero del pianoforte**. Ci sono definizioni più rigorose ed astratte ma per adesso non sono necessarie. Notare come ci sia un semitono anche tra le due coppie Si-Do e Mi-Fa, sprovviste di tasto nero a separarle. Presto capiremo il perché di tale disposizione.
+
+Se prendiamo in considerazione la distanza tra due tasti bianchi consecutivi (escluse le due coppie appena menzionate) abbiamo **il tono**, e valgono le seguenti:
+
+```
+1 tono = 2 semitoni
+1 semitono = 1/2 tono (come suggerisce il nome)
+```
+
+Come centocinquanta centilitri sono un litro e mezzo, valgono tutte le equivalenze del caso:
+
+```
+4 semitoni - 2 toni
+5 semitoni = 2 toni e mezzo
+7 semitoni = 3 toni e mezzo
+etc...
+```
+
+Vedremo a breve come considerare gli intervalli secondo la loro specie aiuti a comunicare in forma più espressiva.
+
+### Un esempio illustre: l'ottava
+
+Ascoltiamo:
+
+<Sequence speed="arpeggio">
+  <Part notes="C3 C4"/>
+</Sequence>
+
+Abbiamo ascoltato la stessa nota, Do, solo che la seconda era più acuta rispetto alla prima. Alcuni di voi sapranno già che il secondo Do era _un'ottava più alto_ rispetto al primo.
+
+:::info[Importante]
+La **relazione di ottava** tra due note è il fondamento della musica, almeno relativamente agli aspetti melodici ed armonici (non dimentichiamoci che bastano [due bastoncini per poter ballare](https://www.youtube.com/watch?v=BODYFCnWLC0)!)
+:::
+
+Contiamo a manina la distanza in tasti tra due Do consecutivi sulla tastiera: iniziando dal tasto nero _successivo_ (Do diesis) e non saltandone alcuno arriviamo al Do successivo in dodici passi, e possiamo concludere che **tra Do e Do ci sono dodici semitoni**! Perché l'abbiamo chiamata ottava però?
+
+Guardiamo per un attimo **il paesaggio dei nomi delle note**, ignorando la tastiera:
+
+```
+Do  Re  Mi  Fa  Sol La  Si  Do  ...
+1   2   3   4   5   6   7   8   ...
+```
+
+I nomi delle note sono sette, quindi il Do successivo rappresenta **l'ottava** nota! Perché non abbiamo scelto nomi diversi per ottave diverse? Perché un piano ha 88 tasti, e la gente ha anche oltre cose da fare oltre a ricordarsi quasi cento nomi! 
+
+Avere a che fare con soli sette nomi semplifica di molto lo sforzo cognitivo relativo a scale ed accordi, di solito espressioni come _il Do all'ottava sopra_ o _il Fa all'ottava sotto_ sono sufficienti a capire di cosa si stia parlando.Per rimuovere ogni ambiguità si ricorre alla notazione scientifica che aggiunge un numero dopo la nota, e.g. `C3` è il Do centrale.
+
+La cosa vale per tutte le note eh, ad esempio il La:
+
+```
+La  Si  Do  Re  Mi  Fa  Sol La
+1   2   3   4   5   6   7   8
+```
+
+Diciamo che **la specie** dell intervallo tra Do e Do (o La e La, Mi e Mi...) è di **ottava**.
+
+Possiamo prendere in considerazione note a distanza di più ottave:
+
+<Sequence speed="arpeggio">
+  <Part notes="C3 C5"/>
+</Sequence>
+
+Diremo che i due Do sono a _due ottave_ di distanza.
+
+Già che ci siamo parliamo dell'intervallo tra una nota e se stessa, senza muoversi affatto: abbiamo 0 semitoni di distanza, oppure un intervallo di **unisono**, chiamato talvolta _intervallo degenere_ poverino.
+
+:::info[Ricapitolando]
+- tra un Do e il Do successivo ci sono **dodici semitoni** di distanza (oppure sei toni);
+- tra Do e Do c'è un intervallo di **ottava**;
+- lo stesso vale tra qualsiasi coppia di note dello stesso nome;
+- se le note si trovano a 24, 36...semitoni tra loro, diremo che sono a 2, 3...ottave di distanza;
+- se le note si trovano a 0 semitoni di distanza diremo che sono la stessa nota, o a distanza di unisono.
+:::
+
+### Un esempio altrettanto illustre: la quinta
+
+Facciamo lo stesso giochino con le note Do e Sol:
+
+<Sequence speed="arpeggio">
+  <Part notes="C3 G3"/>
+</Sequence>
+
+Dal tasto nero dopo il Do sino al Sol fanno **sette semitoni** o tre toni e mezzo se preferite. Torniamo al paesaggio dei nomi delle note:
+
+```
+Do  Re  Mi  Fa  Sol La  Si  Do
+1   2   3   4   5   6   7   8
+^               ^
+```
+
+Analogamente all'ottava, vediamo come il Sol sia la quinta nota della sequenza, e diciamo che tra Do e Sol c'è un **intervallo di quinta**. Anche qui quinta denota **la specie** dell'intervallo.
+
+A differenza del conto dei semitoni con i tasti, la nomenclatura numerica **include la nota di partenza nel conto**, i.e. Do-Re-Mi-Fa-Sol uguale cinque.
+
+Calcoliamo la distanza tra Mi e Si per ribadire il concetto:
+
+<Sequence speed="arpeggio">
+  <Part notes="E3 B3"/>
+</Sequence>
+
+```
+Mi  Fa  Sol La  Si  Do  Re  Mi
+1   2   3   4   5   6   7   8
+^               ^
+```
+
+Mi-Fa-Sol-La-Si, cinque ancora!
+
+**Importante**: a differenza delle distanze tra le città, gli intervalli **hanno una direzione**! Questo perché il paesaggio dei nomi delle note si può navigare in un senso solo, quindi l'intervallo tra Do e Sol è una quinta (vedi sopra), ma quello tra Sol e Do è invece:
+
+<Sequence speed="arpeggio">
+  <Part notes="G3 C4"/>
+</Sequence>
+
+```
+Sol La  Si  Do  Re  Mi  Fa  Sol
+1   2   3   4   5   6   7   8
+^           ^
+```
+
+Diremo che tra Sol e Do (o tra Si e Mi) c'è **una quarta** per la stessa logica. I più svegli di voi potranno già osservare come una quarta ed una quinta facciano un'ottava di distanza, mentre i meno svegli possono limitarsi a leggerlo come hanno appena fatto, poco male!
+
+<Sequence speed="arpeggio">
+  <Part notes="C3 G3 C4"/>
+</Sequence>
+
+Ora sappiamo rispondere alla domanda _che intervallo c'è tra Do e Sol_ ad esempio. Un'altra domanda interessante è _chi c'è una quinta sopra il Re_ ad esempio, rispondete esplorando il paesaggio dei nomi!
+
+:::info[Ricapitolando]
+- tra Do e Sol (e tra Mi e Si) ci sono **sette semitoni** (o tre toni e mezzo);
+- tra Do e Sol c'è **un intervallo di quinta** (o più semplicemente una quinta).
+:::
+
+:::exercise[Esercizio]
+- per ogni tasto bianco del pianoforte, individuare la nota sita ad una quinta di distanza sopra di essa, e prendetene appunto;
+- senza guardare il piano, data una nota a caso, nominate la sua quinta;
+- notare come uno suonerà un po' diverso (Si-Fa), presto ci arriviamo!
+:::
+
+## Qualità degli intervalli
+
+Abbiamo visto come tra Do e Sol ci sia una quinta. Il bello è che esistono vari tipi di quinte! Se avete fatto l'esplorazione suggerita vi sarete imbattuti in una quinta un po' speciale. Innanzitutto ribadiamo perché è quinta:
+
+<Sequence speed="arpeggio">
+  <Part notes="B2 F3"/>
+</Sequence>
+
+```
+Si  Do  Re  Mi  Fa  Sol La
+1   2   3   4   5   6   7
+^               ^
+```
+
+Si-Do-Re-Mi-Fa...cinque! Ma se contiamo i semitoni, vediamo che non sono sette bensì sei (notare come nell'esplorazione della tastiera passiamo per _entrambe_ le coppie senza tasto nero in mezzo).
+
+Soprattutto sentite come suona meno rassicurante delle altre quinte? Sfido, si tratta dell'intervallo più temuto di tutti, il _diabolus in musica_, **il tritono**! Semplicemente sono tre toni appunto invece che tre e mezzo, ed ha un carattere particolare che è alla base della tensione armonica, presto vedremo perché. Per adesso basti a vedere come le cose si stanno per complicare!
+
+Dire _intervallo di quinta_ e basta non è quindi sufficiente a definire tutti gli intervalli in cui le note distino cinque passi lungo il paesaggio dei nomi. Nella fattispecie le quinte incontrate precedentemente (Do-Sol, Mi-Si, ...) si chiamano _quinte giuste_, mentre Si-Fa _quinta diminuita_.
+
+Ora esistono numerosi compendi che elencano le varie specie di intervalli, ma è assai più produttivo incontrarle e definirle una per una assieme.
+
+Arricchiamo adesso la definizione di intervallo secondo specie:
+
+> Tra due note date c'è un intervallo di \{\{ quantità \}\} \{\{ qualità \}\}
+
+Dove:
+
+- per **quantità** si intende la distanza di posizioni lungo il paesaggio dei nomi (abbiamo già visto Do-Do = ottava, Do-Sol = quinta);
+- per **qualità** si intende un modificatore della quantità;
+- i modificatori sono **maggiore**, **minore**, **giusta** (o perfetta), **diminuita** ed **aumentata**.
+
+Tali modificatori non si applicano nello stesso modo a tutte le quantità ahimé, e questo è fonte di confusione all'inizio. Per fortuna le quantità non sono troppe, e a loro volta si dividono solo in due famiglie quindi è meno difficile di quanto sembri!
+
+:::info[Importante]
+Per ora prenderemo in considerazione solo i tasti bianchi del pianoforte. Nell'articolo successivo lavoreremo con i tasti neri e gli accidenti in generale, come se non ne tirassimo abbastanza già così!
+:::
+
+### La famiglia perfetta
+
+Non è quella della celebre marca di biscotti, bensì quella composta dai quattro che seguono:
+
+| Intervallo | Quantità |  Misura in semitoni | Esempi        |
+| -----------|----------|---------------------|---------------|
+| Unisono    | 1        | 0                   | Do-Do         |
+| Quarta     | 4        | 5                   | Do-Fa, Mi-La  |
+| Quinta     | 5        | 7                   | Do-Sol, La-Mi |
+| Ottava     | 8        | 12                  | Do-Do         |
+
+Si chiamano **intervalli perfetti** per ragioni storiche: sin dall'inizio sono stati intervalli fortemente consonanti e stabili. Di base la loro qualità è **giusta** (o perfetta), diremo quindi che:
+
+- tra Do e Sol c'è **una quinta giusta**;
+- tra Do e Fa c'è una **quarta giusta**.
+
+Unisono poverino non si trova mai mentre l'ottava si modifica rarissimamente, quindi si dà per scontato che sia giusta. Quarte e quinte invece possono avere diverse qualità, abbiamo visto l'esempio del tritono: in tale caso appunto abbiamo un intervallo di **quinta diminuita**, perché un semitono più stretto rispetto al corrispondente giusto.
+
+Ma il Si poverino non ha nessuno una quinta (giusta) sopra di lui? Non nei tasti bianchi almeno, per fortuna esiste il Fa diesis:
+
+<Sequence speed="arpeggio">
+  <Part notes="B3 F#4"/>
+</Sequence>
+
+Sono di nuovo sette semitoni, approfondiremo presto.
+
+Se invece di stringere l'intervallo lo allargassimo (i.e. lo portassimo a quattro toni), avremmo una _quinta aumentata_. La collezione dei tasti bianchi del pianoforte non offre quinte aumentate purtroppo, se siete curiosi ascoltate lo stesso scomodando un tasto nero:
+
+<Sequence speed="arpeggio">
+  <Part notes="C3 G#3"/>
+</Sequence>
+
+A breve vedremo cosa accade con le alterazioni, e potremo manipolare tutti gli intervalli. Per adesso sappiamo che sui tasti bianchi abbiamo solo quarte e quinte giuste, nessuna quinta aumentata ed una quinta diminuita o tritono tra Si e Fa, che non è poco.
+
+:::info[Ricapitolando]
+- gli **intervalli perfetti** sono unisono, quarta, quinta ed ottava;
+- di base sono **giusti**, se corrispondono alla misura in semitoni di base (0, 5, 7, 12);
+- se aumentano o diminuiscono tale distanza diventano **aumentati** o **diminuiti**.
+:::
+
+:::info[Esercizio]
+- per ogni tasto bianco, trovare la sua quarta;
+- per ogni nota, ricordare la sua quarta e la sua quinta (e.g. Do => Fa e Sol, Mi => La e Si).
+
+(ricordare che la quinta _giusta_ di Si è Fa#!)
+:::
+
+### La famiglia MinorMaggiore o duale
+
+Chi manca all'appello? Seconde, terze, seste e settime:
+
+| Intervallo       | Quantità |  Misura in semitoni | Esempi        |
+| -----------------|----------|---------------------|---------------|
+| Seconda maggiore | 2        | 2                   | Do-Re, Sol-La |
+| Seconda minore   | 2        | 1                   | Mi-Fa, Si-Do  |
+| Terza maggiore   | 3        | 4                   | Do-Mi, Fa-La  |
+| Terza minore     | 3        | 3                   | Re-Fa, La-Do  |
+| Sesta maggiore   | 6        | 9                   | Do-La, Sol-Mi |
+| Sesta minore     | 6        | 8                   | Mi-Do, Si-Sol |
+| Settima maggiore | 7        | 11                  | Do-Si, Fa-Mi  |
+| Settima minore   | 7        | 10                  | Re-Do, La-Sol |
+
+Mentre gli intervalli perfetti di base sono giusti, questa famiglia ammette due versioni per ogni membro senza che vengano (ancora) definiti aumentati o diminuiti. Perché questa differenza? Per ragioni storiche, vi basti per ora.
+
+### Le terze
+
+Ascoltiamo le terze maggiori:
+
+<Sequence speed="arpeggio">
+  <Part notes="C3 E3"/>
+  <Part notes="F3 A3"/>
+  <Part notes="G3 B3"/>
+</Sequence>
+
+Poi delle terze minori:
+
+<Sequence speed="arpeggio">
+  <Part notes="D3 F3"/>
+  <Part notes="E3 G3"/>
+  <Part notes="A3 C4"/>
+  <Part notes="B3 D4"/>
+</Sequence>
+
+**Le terze** sono un blocco fondamentale dell'armonia: dagli accordi all'armonizzazione per terze parallele appunto, sono un costituente unico. Una terza maggiore assieme ad una terza minore formano una quinta giusta, ecco tre esempi coi tasti bianchi:
+
+<Sequence speed="arpeggio">
+  <Part notes="C3 E3 G3"/>
+  <Part notes="F3 A3 C4"/>
+  <Part notes="G3 B3 D4"/>
+</Sequence>
+
+Tutte e tre le note assieme formano l'**accordo maggiore** già che ci siamo.
+
+Se partiamo da una _terza minore_ la musica cambia invece:
+
+<Sequence speed="arpeggio">
+  <Part notes="D3 F3 A3"/>
+  <Part notes="E3 G3 B3"/>
+  <Part notes="A3 C4 E4"/>
+</Sequence>
+
+Otteniamo tre **acccordi minori**.
+
+:::info[Nota]
+Visto che gli intervalli (e gli accordi) maggiori e minori sono ugualmente frequenti ed importanti, nessuna delle due qualità potrebbe prevalere sull'altra e diventare quella predefinita per la quantità corrispondente, a differenza delle quinte e delle quarte che hanno una versione giusta ed egemone.
+:::
+
+E il Si poverino di nuovo?
+
+<Sequence speed="arpeggio">
+  <Part notes="B3 D4 F4"/>
+</Sequence>
+
+Non è un accordo maggiore di certo, ma neppure minore. È un **accordo diminuito**, perché contiene una quinta diminuita appunto. Osserviamo come è la composizione di **due terze minori**. Aritmetica degli intervalli!
+
+Per suonare Si minore dovremmo suonare Fa#, mentre per suonare Si maggiore anche il Re#:
+
+<Sequence speed="arpeggio">
+  <Part notes="B3 D4 F#4"/>
+  <Part notes="B3 D#4 F#4"/>
+</Sequence>
+
+Presto saremo capaci di orientarci in tutto il paesaggio cromatico, per adesso ci basti come osservazione.
+
+:::info[Esercizio]
+- per ogni tasto bianco, trovare la sua terza e dire che qualità di intervallo è (minore, maggiore);
+- per ogni tasto bianco, suonare assieme la sua terza e la sua quinta, e dire che tipo di accordo è (maggiore, minore, diminuito).
+:::
+
+### Le seste
+
+Prima le maggiori:
+
+<Sequence speed="arpeggio">
+  <Part notes="C3 A3"/>
+  <Part notes="F3 D4"/>
+  <Part notes="G3 E4"/>
+</Sequence>
+
+Poi le minori:
+
+<Sequence speed="arpeggio">
+  <Part notes="D3 B3"/>
+  <Part notes="E3 C4"/>
+  <Part notes="A3 F4"/>
+</Sequence>
+
+Come a cosa servono le seste! Ad armonizzare per seste innanzitutto, e poi per invertire gli accordi:
+
+<Sequence speed="arpeggio">
+  <Part notes="C3 E3 G3"/>
+  <Part notes="E3 G3 C4"/>
+  <Part notes="D3 F3 A3"/>
+  <Part notes="F3 A3 D4"/>
+</Sequence>
+
+Una terza (maggiore) ed una sesta (minore) fanno un ottava:
+
+<Sequence speed="arpeggio">
+  <Part notes="C3 E3 C4"/>
+  <Part notes="F3 A3 F4"/>
+  <Part notes="G3 B3 G4"/>
+</Sequence>
+
+Una terza (minore) ed una sesta (maggiore) fanno un ottava:
+
+<Sequence speed="arpeggio">
+  <Part notes="D3 F3 D4"/>
+  <Part notes="E3 G3 E4"/>
+  <Part notes="A3 C4 A4"/>
+  <Part notes="B3 D4 B4"/>
+</Sequence>
+
+:::info[Esercizio]
+- per ogni tasto bianco, trovare la sua sesta e dire che qualità di intervallo è (minore, maggiore);
+- per ogni tasto bianco, suonare assieme la sua terza e la sua sesta, e dire che tipo di accordo è (maggiore, minore, diminuito). Occhio che sono inversioni!
+:::
+
+### Le seconde
+
+Per le seconde la farei breve, visto che si tratta della nota successiva. Se c'è il tasto nero di mezzo abbiamo una **seconda maggiore** (due semitoni), mentre nel caso di Si-Do e Mi-Fa abbiamo la **seconda minore** (singolo semitono).
+
+Nell'articolo sulle alterazioni capiremo perché l'intervallo tra Do e Do# è classificato diversamente rispetto a quello tra Do e Reb (e in certi contesti suona anche diverso all'orecchio).
+
+### Le settime
+
+Le settime sono un'ulteriore costituente fondamentale dell'armonia, dagli accordi di settima di dominante alle quadriadi alla base del jazz e di tanti altri generi.
+
+Ascoltiamo le maggiori:
+
+<Sequence speed="arpeggio">
+  <Part notes="C3 B3"/>
+  <Part notes="F3 E4"/>
+</Sequence>
+
+Poi le minori:
+
+<Sequence speed="arpeggio">
+  <Part notes="D3 C4"/>
+  <Part notes="E3 D4"/>
+  <Part notes="G3 F4"/>
+  <Part notes="A3 G4"/>
+  <Part notes="B3 A4"/>
+</Sequence>
+
+Ascoltiamole in contesto armonico:
+
+<Sequence speed="arpeggio">
+  <Part notes="D3 F3 A3 C4"/>
+  <Part notes="G3 B3 D4 F4"/>
+  <Part notes="C3 E3 G3 B3"/>
+</Sequence>
+
+Abbiamo aggiunto una quarta nota ai tre accordi di base (Re minore, Sol maggiore, Do maggiore), ottenendo Re minore settima, Sol settima (di dominante), Do maggiore settima.
+
+:::info[Esercizio]
+- per ogni tasto bianco, trovare la sua settima e dire che qualità di intervallo è;
+- per ogni tasto bianco, suonare il corrispondente accordo di settima;
+- enunciarne il tipo (settima maggiore, settima di dominante, settima minore, semidiminuito - Si è sempre lui poverino...).
+:::
+
+### Aumenti e diminuzioni nella famiglia duale
+
+Anche questi intervalli possono mutare in ampiezza e generare i corrispondenti aumentati e diminuiti, non nei tasti bianchi però.
+
+Ascoltiamo una **seconda aumentata** (Fa-Sol#) ad esempio:
+
+<Sequence speed="arpeggio">
+  <Part notes="F3 G#3"/>
+</Sequence>
+
+E una **sesta diminuita** (Re-Sib):
+
+<Sequence speed="arpeggio">
+  <Part notes="D3 Bb3"/>
+</Sequence>
+
+Ehi ehi, ma la seconda aumentata suona come una terza minore, sono tre semitoni li ho contati! Lo so, ma nel paesaggio delle note la distanza è due (Fa-Sol), e questo vince sul conto dei semitoni. Se vuoi una terza minore a partire dal Fa, richiesta ragionevolissima se vuoi suonare un Fa minore peraltro, devi chiamare l'altra nota **La bemolle**:
+
+<Sequence speed="arpeggio">
+  <Part notes="F3 Ab3"/>
+</Sequence>
+
+Perché almeno sul piano, Sol diesis e La bemolle sono lo stesso tasto. Non l'ho deciso io baby, c'è un motivo e lo vediamo presto. Sì, una sesta diminuita è una quinta aumentata, ma i nomi delle note vincono anche qui.
+
+## Considerazioni finali
+
+Per un primo contatto con gli intervalli è già troppo per i miei gusti. Per adesso il consiglio è di conoscere bene le relazioni tra i tasti bianchi, e di espandere presto le stesse considerazioni al resto del paesaggio cromatico.
+
+:::info[Esercizio]
+
+Per ogni tasto bianco recitate:
+
+- la **nota stessa**, la **terza** e la **quinta** (e.g. Do-Mi-Sol, Sol-Si-Re);
+- **quarta** e **quinta** (e.g. Do => Fa-Sol, La => Re-Mi);
+- **terza** e **sesta** (e.g. Do=>Mi-La, Fa=>La-Re);
+- **seconda** e **settima** (e.g. Do=>Re-Si, Mi=>Fa-Re).
+
+Date due tasti bianchi a caso del piano, nominate l'intervallo corrispondente, ad esempio:
+
+- Re-Do => settima minore;
+- Fa-Re => sesta maggiore;
+- Sol-Do => terza maggiore;
+- Si-Fa => quinta diminuita;
+- Mi-La => quarta giusta.
+:::
