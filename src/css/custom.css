@@ -51,18 +51,20 @@
 .sequence .sequence-content {
   display: flex;
   align-items: center;
-}
-
-.sequence .paino {
-  transition: opacity 0.2s ease-in-out;
+  gap: 1rem;
 }
 
 .paino {
   margin: 0;
 }
 
-.sequence.sequence-show-split.sequence-is-playing .is-playing {
-  opacity: 0.6;
+.piano-wrapper.show-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.piano-wrapper.show-actions .button-group {
+  align-items: center;
 }
 
 .sequence.sequence-show-split .piano-wrapper {
@@ -83,12 +85,10 @@
   overflow-y: auto;
 }
 
-.sequence-actions {
-  margin-left: 1rem;
-}
-
-.sequence-actions .action:not(:last-child) {
-  margin-right: 0.5rem;
+.button-group {
+  /* margin-left: 1rem;
+  display: flex;
+  gap: 1rem; */
 }
 
 g.abcjs-note.is-playing {
@@ -119,4 +119,17 @@ g.abcjs-note.is-playing {
 
 .table thead tr th {
   text-align: left;
+}
+
+.paino .key {
+  position: relative;
+}
+
+.paino .key.playing:after {
+  content: '●';
+  font-size: .7rem;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
