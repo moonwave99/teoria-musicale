@@ -21,7 +21,13 @@ function getSpeed({ arpeggio, rake }, mainSpeed) {
     return mainSpeed;
 }
 
-export function Sequence({ split = false, speed, children, startOctave }) {
+export function Sequence({
+    split = false,
+    speed,
+    children,
+    startOctave,
+    sequenceKey = "C",
+}) {
     const [isPlaying, setPlaying] = useState(false);
     const [currentMeasure, setCurrentMeasure] = useState(-1);
     const [showSplit, setShowSplit] = useState(split);
@@ -82,6 +88,7 @@ export function Sequence({ split = false, speed, children, startOctave }) {
             })}
         >
             <Notation
+                sequenceKey={sequenceKey}
                 parts={parts}
                 currentMeasure={currentMeasure}
                 onNoteClick={onNoteClick}
