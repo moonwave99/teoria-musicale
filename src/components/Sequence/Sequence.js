@@ -11,19 +11,13 @@ export function Part(props) {
     return null;
 }
 
-function getSpeed({ arpeggio, rake }, mainSpeed) {
-    if (arpeggio) {
-        return "arpeggio";
-    }
-    if (rake) {
-        return "rake";
-    }
-    return mainSpeed;
+function getSpeed({ articulation }, mainArticulation) {
+    return articulation || mainArticulation;
 }
 
 export function Sequence({
     split = false,
-    speed,
+    articulation,
     children,
     startOctave,
     sequenceKey = "C",
@@ -37,7 +31,14 @@ export function Sequence({
     }
     const parts = children.map(({ props }, i) => ({
         ...props,
-        notes: padSequenceWithOctave(props.notes, props.octave || startOctave),
+        notes: props.notes.includes(", ")
+            ? props.notes
+                  .split(", ")
+                  .map((x) =>
+                      padSequenceWithOctave(x, props.octave || startOctave)
+                  )
+                  .join(", ")
+            : padSequenceWithOctave(props.notes, props.octave || startOctave),
         id: `part${sha1(`${props.notes}-${i}`)}`,
     }));
 
@@ -49,12 +50,11 @@ export function Sequence({
         setPlaying(true);
         for (let [index, props] of parts.entries()) {
             const { notes: chord } = props;
-
             const { notes } = parseNotes(chord);
             setCurrentMeasure(index);
             await soundEngine.play({
                 notes,
-                speed: getSpeed(props, speed),
+                speed: getSpeed(props, articulation),
                 id: props.id,
             });
         }
@@ -90,6 +90,7 @@ export function Sequence({
             <Notation
                 sequenceKey={sequenceKey}
                 parts={parts}
+                articulation={articulation}
                 currentMeasure={currentMeasure}
                 onNoteClick={onNoteClick}
             />

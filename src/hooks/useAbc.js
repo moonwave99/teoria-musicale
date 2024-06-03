@@ -7,33 +7,41 @@ function upOneOctave(note) {
     return transpose(note, "8P");
 }
 
-function notesToAbc(notes) {
-    return notes.map(
-        (x) =>
-            `[${x
-                .split(" ")
-                .map(scientificToAbcNotation)
-                .map(upOneOctave)
-                .join("")}]`
-    );
+function partToAbc({ notes, articulation }, mainArticulation) {
+    if (!articulation) {
+        articulation = mainArticulation;
+    }
+    if (articulation === "arpeggio") {
+        return notes
+            .split(" ")
+            .map(scientificToAbcNotation)
+            .map(upOneOctave)
+            .join("");
+    }
+
+    return `${articulation === "rake" ? "!arpeggio!" : ""}[${notes
+        .split(" ")
+        .map(scientificToAbcNotation)
+        .map(upOneOctave)
+        .join("")}]`;
 }
 
-function getAbcString(notes, key = "C") {
+function getAbcString(parts, articulation, key = "C") {
     return `
     X: 1
     M: 4/4
     L: 1
     K: ${key}
-    ${notesToAbc(notes).join("|")}||
+    ${parts.map((part) => partToAbc(part, articulation)).join("|")}||
     `;
 }
 
-function getAbcStringForBothHands(notes, key = "C") {
-    const leftVoice = [];
-    const rightVoice = [];
+function getAbcStringForBothHands(parts, articulation, key = "C") {
+    const leftVoice = { notes: [] };
+    const rightVoice = { notes: [] };
 
-    notes.forEach((x) => {
-        let [left, right] = x.split(",");
+    parts.forEach(({ notes, articulation }) => {
+        let [left, right] = notes.split(", ");
         left = left
             .trim()
             .split(" ")
@@ -44,8 +52,10 @@ function getAbcStringForBothHands(notes, key = "C") {
             .split(" ")
             .map((x) => padWithOctave(x, 4))
             .join(" ");
-        leftVoice.push(left);
-        rightVoice.push(right);
+        leftVoice.articulation = articulation;
+        rightVoice.articulation = articulation;
+        leftVoice.notes.push(left);
+        rightVoice.notes.push(right);
     });
 
     return `
@@ -54,9 +64,9 @@ function getAbcStringForBothHands(notes, key = "C") {
   L: 1
   V: 1
   K: ${key}
-  ${notesToAbc(rightVoice).join("|")}||
+  ${rightVoice.notes.map((notes) => partToAbc({ notes }, articulation))}||
   V: 2 clef=bass
-  ${notesToAbc(leftVoice).join("|")}||
+  ${leftVoice.notes.map((notes) => partToAbc({ notes }, articulation))}||
   `;
 }
 
@@ -69,6 +79,7 @@ const abcOptions = {
 
 export default function useAbc({
     parts,
+    articulation,
     currentMeasure,
     onNoteClick,
     key = "C",
@@ -86,13 +97,14 @@ export default function useAbc({
     );
 
     useEffect(() => {
-        const notes = parts.map((x) => x.notes);
-        const abcString = notes.some((x) => x.indexOf(",") > -1)
-            ? getAbcStringForBothHands(notes, key)
-            : getAbcString(notes, key);
+        const abcString = parts
+            .map((x) => x.notes)
+            .some((x) => x.includes(", "))
+            ? getAbcStringForBothHands(parts, articulation, key)
+            : getAbcString(parts, articulation, key);
 
         abc.renderAbc(ref.current, abcString, { ...abcOptions, clickListener });
-    }, [parts, key, clickListener]);
+    }, [parts, articulation, key, clickListener]);
 
     useEffect(() => {
         const els = ref.current.querySelectorAll("g.abcjs-note");
