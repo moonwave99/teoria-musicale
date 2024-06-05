@@ -43,6 +43,7 @@ const config = {
                 },
                 blog: {
                     truncateMarker: new RegExp("<Truncate/>"),
+                    routeBasePath: "/",
                 },
             }),
         ],
@@ -58,7 +59,6 @@ const config = {
                     src: "img/logo.svg",
                 },
                 items: [
-                    { to: "/blog", label: "Articles", position: "left" },
                     {
                         href: "https://github.com/moonwave99/paino",
                         label: "GitHub",
