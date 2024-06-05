@@ -6,9 +6,9 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: "Paino Blog",
-    tagline: "Piano, painless",
-    url: "https://your-docusaurus-test-site.com",
+    title: "Teoria Musicale",
+    tagline: "Appunti di teoria musicale",
+    url: "https://paino-blog.vercel.app",
     baseUrl: "/",
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",
@@ -53,14 +53,14 @@ const config = {
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             navbar: {
-                title: "Paino",
+                title: "Teoria Musicale",
                 logo: {
-                    alt: "Paino",
+                    alt: "Teoria Musicale",
                     src: "img/logo.svg",
                 },
                 items: [
                     {
-                        href: "https://github.com/moonwave99/paino",
+                        href: "https://github.com/moonwave99/paino-blog",
                         label: "GitHub",
                         position: "right",
                     },
