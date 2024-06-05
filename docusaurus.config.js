@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: "Teoria Musicale",
+    title: "Appunti di Teoria Musicale",
     tagline: "Appunti di teoria musicale",
     url: "https://paino-blog.vercel.app",
     baseUrl: "/",
@@ -42,6 +42,7 @@ const config = {
                     ],
                 },
                 blog: {
+                    blogSidebarCount: 0,
                     truncateMarker: new RegExp("<Truncate/>"),
                     routeBasePath: "/",
                 },
@@ -53,12 +54,22 @@ const config = {
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             navbar: {
-                title: "Teoria Musicale",
+                title: "Appunti di Teoria Musicale",
                 logo: {
-                    alt: "Teoria Musicale",
+                    alt: "Appunti di Teoria Musicale",
                     src: "img/logo.svg",
                 },
                 items: [
+                    {
+                        href: "/contents",
+                        label: "Indice dei contenuti",
+                        position: "right",
+                    },
+                    {
+                        href: "/about",
+                        label: "About",
+                        position: "right",
+                    },
                     {
                         href: "https://github.com/moonwave99/paino-blog",
                         label: "GitHub",
