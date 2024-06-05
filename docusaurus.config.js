@@ -79,7 +79,7 @@ const config = {
             },
             footer: {
                 style: "dark",
-                copyright: `Copyright © ${new Date().getFullYear()} mwlabs. Built with Docusaurus.`,
+                copyright: `Copyright © ${new Date().getFullYear()} Diego Caponera.`,
             },
             prism: {
                 theme: lightCodeTheme,
