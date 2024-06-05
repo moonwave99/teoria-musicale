@@ -1,0 +1,208 @@
+---
+slug: intervalli-ed-alterazioni
+title: Intervalli ed alterazioni
+authors: [diego]
+tags: [teoria, intervalli]
+---
+
+Ora che sappiamo destreggiarci con tutte le specie di intervallo sui tasti bianchi, siamo pronti a vedere come ci si comporta quando entrano in gioco le alterazioni.
+
+<Truncate/>
+
+## Cosa hanno di speciale i tasti bianchi?
+
+I tasti bianchi del pianoforte costituiscono un sottoinsieme della scala cromatica (costituita da dodici suoni) che almeno come ascoltatori conosciamo assai bene: la **scala di Do maggiore**, che corrisponde alla **tonalità di Do maggiore** (_scala_ e _tonalità_ non sempre coincidono occhio), che è semplicemente facile da individuare e da suonare sul pianoforte.
+
+Siamo in grado infatti di rispondere alle seguenti domande ad esempio:
+
+- chi c'è una **terza maggiore** sopra il Do? Il Mi;
+- chi c'è una **terza minore** sopra il Re? Il Fa;
+- chi c'è una **quarta giusta** sopra il La? Il Re;
+- chi c'è una **quinta diminuita** sopra il Si? Il Fa;
+- chi c'è una **settima maggiore** sopra il Fa? Il Mi.
+
+<Sequence articulation="arpeggio">
+  <Part notes="C3 E3"/>
+  <Part notes="D3 F3"/>
+  <Part notes="A3 D4"/>
+  <Part notes="B3 F4"/>
+  <Part notes="F3 E4"/>
+</Sequence>
+
+## Welcome tasti neri
+
+Chi c'è...abbiano capito basta. Proviamo a rispondere alle seguenti invece:
+
+- chi c'è una **terza minore** sopra il Do?
+- chi c'è una **terza maggiore** sopra il La?
+- chi c'è una **quinta giusta** sopra il Si?
+- chi c'è una **settima maggiore** sopra il Sol?
+
+Andiamo in ordine. Ricordiamo come una terza minore misuri tre semitoni, uno di meno di quella maggiore che abbiamo tra Do e Mi. Per ridurre tale intervallo di un semitono dobbiamo guardare al tasto nero che precede il Mi, il **Mi bemolle** bravissimi! Do-Mi bemolle, **terza minore**.
+
+<Sequence articulation="arpeggio">
+  <Part notes="C3 Eb3"/>
+</Sequence>
+
+Di passo, se suoniamo Do-Mi-Sol abbiamo l'accordo di Do maggiore, se suoniamo Do-Mib-Sol abbiamo Do minore. Coincidenze?
+
+:::info[Importante]
+Il Do non si può toccare in questo caso, perché la richiesrta è precisa e vuole il Do come **prima nota dell'intervallo**.
+
+Se avessimo innalzato il Do di mezzo tono senza toccare il Mi, avremmo ottenuto Do#-Mi terza minore anch'essa per carità, ma con una diversa nota di partenza.
+:::
+
+Procediamo, sappiamo che La-Do è una terza minore. Ci serve il suo corrispettivo maggiore: dobbiamo allargare l'intervallo innalzando la seconda nota con un diesis. La-Do#, **terza maggiore**:
+
+<Sequence articulation="arpeggio">
+  <Part notes="A3 C#4"/>
+</Sequence>
+
+Avanti: appiamo che Si-Fa è quinta diminuita, sei semitoni. Per arrivare a sette dobbiamo innalzare il Fa con un diesis. Si-Fa#, **quinta giusta**.
+
+<Sequence articulation="arpeggio">
+  <Part notes="B3 F#4"/>
+</Sequence>
+
+Ultimo quesito: troviamo la settima maggiore a parire dal Sol. Anche qui possiamo procedere contando tutti e 11 i semitoni, o facendoci furbi contando l'intervallo complementare cioè la seconda minore, un singolo semitono. Chi c'è un semitono sotto il Sol? Il **Fa diesis**, esatto! Sol-Fa#, **settima maggiore**.
+
+<Sequence articulation="arpeggio">
+  <Part notes="G3 F#4"/>
+</Sequence>
+
+Avremmo anche potuto ricordare come Sol-Fa sia una _settima minore_, ed innalzare il Fa di conseguenza. Sono tutte osservazioni pertinenti ed è importante far considerazioni da più punti di vista, senza trascurare mai l'obiettivo dell'interiorizzazione totale di tutte le relazioni possibili tra le note.
+
+:::info[Nota]
+Lo studio degli intervalli risulta molto più semplice se
+:::
+
+## Enarmonia unica via
+
+Un grosso scoglio cognitivo contro cui ogni musicista va a cozzare è quello dell'**enarmonia**, il fatto cioè che esistano suoni coincidenti (o molto simili) cui si riferiscono più nomi. Ad esempio abbiamo visto prima Do-Mi bemolle terza minore. Ma lo stesso tasto si chiamerà Re diesis quando suoneremo un accordo di Si maggiore ad esempio:
+
+<Sequence articulation="arpeggio">
+  <Part notes="C3 Eb3 G3"/>
+  <Part notes="B2 D#3 F#3"/>
+</Sequence>
+
+Osserviamo come la nota centrale di entrambi gli accordi coincida sebbene sia chiamata in modo diverso. Non c'è niente di strano, del resto voi siete figli di vostra madre e nipoti di vostro nonno, quindi il tasto nero tra Re e Mi ha tutto il diritto di rispondere a più definizioni!
+
+:::info[Importante]
+Anche i tasti bianchi hanno corrispettivi enarmonici:
+
+- il Do è il Si diesis;
+- il Si è il Do bemolle;
+- il Fa è il Mi diesis;
+- il Mi è il Fa bemolle.
+
+In alcuni contesti valgono anche le alterazioni multiple:
+
+- il La è il Si doppio bemolle (nella tetrade diminuita di Do, Do-Mib-Solb-Sibb);
+- il Sol è il Fa doppio diesis (nell'accordo di dominante di Si con la quinta aumentata, Si-Re#-Fa##-La) - _sharp five_ si dice in jazz, much cooler!
+:::
+
+## La specie vince sui semitoni
+
+Questa è una regola importante da tenere a mente: se ci serve un intervallo di terza ad esempio, è fondamentale che lungo il paesaggio dei nomi tale distanza venga rispettata. Di nuovo terza minore a partire da Do, abbiamo visto che è Mi bemolle. Anche se tale nota è enarmonica col Re diesis (tasto nero _dopo_ il Re), Do-Re# non è affatto un intervallo di terza! Torniamo al paesaggio:
+
+```
+Do  Re  Mi  Fa  Sol La  Si  Do
+1   2   3   4   5   6   7   8
+^       ^
+```
+
+Do-Mi: terza. Guardiamo come il paesaggio **non presenta alterazioni**: esse vanno applicate successivamente per stabilire la specie.
+
+Ora Do-Mi senza alterazioni sarebbe una terza maggiore, ma il bemolle sulla seconda nota stringe l'intervallo di un semitono e lo rende minore, bingo!
+
+Torniamo a Do-Re#:
+
+```
+Do  Re  Mi  Fa  Sol La  Si  Do
+1   2   3   4   5   6   7   8
+^   ^
+```
+
+Do-Re: seconda. Senza alterazioni sarebbe una seconda maggiore, con il diesis ad allargare diventa **seconda aumentata**. Non è la stessa nota, è lo stesso suono! Quando ti gaserai con la scala minore armonica me ne sarai grato, per adesso stacce.
+
+<Sequence articulation="arpeggio">
+  <Part notes="C3 Eb3"/>
+  <Part notes="C3 D#3"/>
+</Sequence>
+
+## Metodo generale di calcolo degli intervalli
+
+Proviamo a ricavare un metodo generale per stabilire la specie di un intervallo dato, ad esempio **Mi-Si bemolle**.
+
+Prima vediamo **che intervallo avremmo ignorando le alterazioni** (su entrambe le note se presenti):
+
+```
+Mi  Fa  Sol La  Si  Do  Re  Mi
+1   2   3   4   5   6   7   8
+^               ^
+```
+
+Mi-Si: **quinta giusta**.
+
+Ora applichiamo le eventuali alterazioni: abbiamo un bemolle sulla seconda nota, stringiamo l'intervallo: **quinta diminuita**. Contiamo i semitoni al piano se non ci fidiamo!
+
+<Sequence articulation="arpeggio">
+  <Part notes="E3 Bb3"/>
+</Sequence>
+
+Altro esempio, **Sol bemolle-Si-bemolle**. Paesaggio:
+
+```
+Sol La  Si  Do  Re  Mi  Fa  Sol
+1   2   3   4   5   6   7   8
+^       ^
+```
+
+Sol-Si sarebbe una **terza maggiore**. Bemolle solo sotto allargherebbe a terza aumentata, ma quello sopra la riporta a maggiore, ascoltare per credere:
+
+<Sequence articulation="arpeggio">
+  <Part notes="Gb3 Bb3"/>
+</Sequence>
+
+:::info[Nota]
+Esistono scenari come Mi bemolle-Sol diesis, dove la terza diventa **più che aumentata** perché l'intervallo è allargato da entrambe le parti. È molto probabile che invece avrete a che fare con Mi bemolle-La bemolle quarta giusta. Idem vale con una doppia riduzione (Re diesis-Sol bemolle), tecnicamente una **quarta più che diminuita**, ma che molto probabilmente sarà Mi bemolle-Sol bemolle terza minore!
+:::
+
+## Considerazioni finali
+
+Ci sono contesti musicali in cui tali scenari hanno senso (modulazioni, direzioni melodiche degli accidenti, intonazioni particolari degli strumenti), per adesso non fasciatevi la testa e crogiolatevi nella bambagia del temperamento equabile.
+
+Dobbiamo farci sempre sti conti? No, dobbiamo interiorizzare! A forza di suonare in altre tonalità oltre al Do maggiore, non dovremo più pensare alle distanze tra le note perché avremo tutto nella memoria sia mentale che muscolare.
+
+Cosa più importante di tutte: **ascoltate** e **suonate**! Una volta chiaro il suono di una terza maggiore ad esempio, potrete valutare in maniera autonoma la correttezza dei vostri esercizi suonandoli. Imparate anche a riconoscere gli intervalli nella musica che studiate, o in quella che passano alla radio, iniziate a raccogliere i vostri esempi preferiti e l'apprendimento sarà non solo più fruttuoso ma divertente.
+
+:::info[Esercizi]
+Per ogni tasto bianco, elencare e suonare gli intervalli corrispondenti:
+
+- terze maggiori (Do-Mi, Re-Fa#, Mi-Sol#...);
+- terze minori (Do-Mib, Re-Fa, Mi-Sol...);
+- quarte giuste (Do-Fa, Re-Sol, Mi-La...);
+- quinte giuste (Do-Sol, Re-La, Mi-Si...);
+- seste maggiori;
+- seste minori;
+- settime maggiori;
+- settime minori;
+- seconde maggiori;
+- seconde minori.
+
+Per ogni tasto bianco, elencare e suonare le corrispondenti coppie di intervalli:
+
+- quarta e quinta;
+- terza e sesta maggiori (Do-Mi / Do-La, Re-Fa# / Re-Si...);
+- terza e sesta minori (Do-Mib / Do-Lab, Re-Fa / Re-Sib...);
+- seconda e settima maggiori;
+- seconda e settima minori.
+
+Bonus: fare lo stesso con i tasti neri, prestando attenzione agli equivalenti enarmonici:
+
+- Do diesis / Re bemolle;
+- Mi bemolle;
+- Fa diesis / Sol bemolle;
+- La bemolle;
+- Si bemolle.
+:::
