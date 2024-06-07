@@ -44,7 +44,7 @@ const config = {
                 blog: {
                     blogSidebarCount: 0,
                     truncateMarker: new RegExp("<Truncate/>"),
-                    routeBasePath: "/",
+                    routeBasePath: "/articles",
                 },
             }),
         ],
@@ -59,27 +59,11 @@ const config = {
                     alt: "Appunti di Teoria Musicale",
                     src: "img/logo.svg",
                 },
-                items: [
-                    {
-                        href: "/contents",
-                        label: "Indice dei contenuti",
-                        position: "right",
-                    },
-                    {
-                        href: "/about",
-                        label: "About",
-                        position: "right",
-                    },
-                    {
-                        href: "https://github.com/moonwave99/paino-blog",
-                        label: "GitHub",
-                        position: "right",
-                    },
-                ],
+                items: [],
             },
             footer: {
                 style: "dark",
-                copyright: `Copyright © ${new Date().getFullYear()} Diego Caponera.`,
+                copyright: `Copyright © ${new Date().getFullYear()} <a target="_blank" rel="noopener noreferrer" href="https://www.diegocaponera.com">Diego Caponera.</a>`,
             },
             prism: {
                 theme: lightCodeTheme,
