@@ -1,2 +1,3 @@
-# paino-blog
-Created with CodeSandbox
+# Teoria Musicale
+
+Appunti di teoria musicale

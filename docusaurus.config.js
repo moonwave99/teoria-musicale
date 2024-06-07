@@ -8,25 +8,15 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
     title: "Appunti di Teoria Musicale",
     tagline: "Appunti di teoria musicale",
-    url: "https://paino-blog.vercel.app",
+    url: "https://teoria-musicale.vercel.app",
     baseUrl: "/",
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",
     favicon: "img/favicon.ico",
-
-    // GitHub pages deployment config.
-    // If you aren't using GitHub pages, you don't need these.
-    organizationName: "mwlabs", // Usually your GitHub org/user name.
-    projectName: "paino-blog", // Usually your repo name.
-
-    // Even if you don't use internalization, you can use this field to set useful
-    // metadata like html lang. For example, if your site is Chinese, you may want
-    // to replace "en" with "zh-Hans".
     i18n: {
         defaultLocale: "it",
         locales: ["it"],
     },
-
     presets: [
         [
             "classic",
