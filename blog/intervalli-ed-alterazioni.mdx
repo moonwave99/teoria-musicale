@@ -20,13 +20,9 @@ Siamo in grado infatti di rispondere alle seguenti domande ad esempio:
 - chi c'è una **quinta diminuita** sopra il Si? Il Fa;
 - chi c'è una **settima maggiore** sopra il Fa? Il Mi.
 
-<Sequence articulation="arpeggio">
-  <Part notes="C3 E3"/>
-  <Part notes="D3 F3"/>
-  <Part notes="A3 D4"/>
-  <Part notes="B3 F4"/>
-  <Part notes="F3 E4"/>
-</Sequence>
+<Score defaultNoteLength='1/2'>
+CE|DF|Ad|Bf|Fe
+</Score>
 
 ## Welcome tasti neri
 
@@ -39,9 +35,9 @@ Chi c'è...abbiano capito basta. Proviamo a rispondere alle seguenti invece:
 
 Andiamo in ordine. Ricordiamo come una terza minore misuri tre semitoni, uno di meno di quella maggiore che abbiamo tra Do e Mi. Per ridurre tale intervallo di un semitono dobbiamo guardare al tasto nero che precede il Mi, il **Mi bemolle** bravissimi! Do-Mi bemolle, **terza minore**.
 
-<Sequence articulation="arpeggio">
-  <Part notes="C3 Eb3"/>
-</Sequence>
+<Score defaultNoteLength='1/2'>
+C_E
+</Score>
 
 Di passo, se suoniamo Do-Mi-Sol abbiamo l'accordo di Do maggiore, se suoniamo Do-Mib-Sol abbiamo Do minore. Coincidenze?
 
@@ -53,21 +49,21 @@ Se avessimo innalzato il Do di mezzo tono senza toccare il Mi, avremmo ottenuto 
 
 Procediamo, sappiamo che La-Do è una terza minore. Ci serve il suo corrispettivo maggiore: dobbiamo allargare l'intervallo innalzando la seconda nota con un diesis. La-Do#, **terza maggiore**:
 
-<Sequence articulation="arpeggio">
-  <Part notes="A3 C#4"/>
-</Sequence>
+<Score defaultNoteLength='1/2'>
+A^c
+</Score>
 
 Avanti: appiamo che Si-Fa è quinta diminuita, sei semitoni. Per arrivare a sette dobbiamo innalzare il Fa con un diesis. Si-Fa#, **quinta giusta**.
 
-<Sequence articulation="arpeggio">
-  <Part notes="B3 F#4"/>
-</Sequence>
+<Score defaultNoteLength='1/2'>
+B^f
+</Score>
 
 Ultimo quesito: troviamo la settima maggiore a parire dal Sol. Anche qui possiamo procedere contando tutti e 11 i semitoni, o facendoci furbi contando l'intervallo complementare cioè la seconda minore, un singolo semitono. Chi c'è un semitono sotto il Sol? Il **Fa diesis**, esatto! Sol-Fa#, **settima maggiore**.
 
-<Sequence articulation="arpeggio">
-  <Part notes="G3 F#4"/>
-</Sequence>
+<Score defaultNoteLength='1/2'>
+G^f
+</Score>
 
 Avremmo anche potuto ricordare come Sol-Fa sia una _settima minore_, ed innalzare il Fa di conseguenza. Sono tutte osservazioni pertinenti ed è importante far considerazioni da più punti di vista, senza trascurare mai l'obiettivo dell'interiorizzazione totale di tutte le relazioni possibili tra le note.
 
@@ -79,10 +75,9 @@ Lo studio degli intervalli risulta molto più semplice se
 
 Un grosso scoglio cognitivo contro cui ogni musicista va a cozzare è quello dell'**enarmonia**, il fatto cioè che esistano suoni coincidenti (o molto simili) cui si riferiscono più nomi. Ad esempio abbiamo visto prima Do-Mi bemolle terza minore. Ma lo stesso tasto si chiamerà Re diesis quando suoneremo un accordo di Si maggiore ad esempio:
 
-<Sequence articulation="arpeggio">
-  <Part notes="C3 Eb3 G3"/>
-  <Part notes="B2 D#3 F#3"/>
-</Sequence>
+<Score defaultNoteLength='1'>
+[C_EG]|[B,^D^F]
+</Score>
 
 Osserviamo come la nota centrale di entrambi gli accordi coincida sebbene sia chiamata in modo diverso. Non c'è niente di strano, del resto voi siete figli di vostra madre e nipoti di vostro nonno, quindi il tasto nero tra Re e Mi ha tutto il diritto di rispondere a più definizioni!
 
@@ -124,10 +119,9 @@ Do  Re  Mi  Fa  Sol La  Si  Do
 
 Do-Re: seconda. Senza alterazioni sarebbe una seconda maggiore, con il diesis ad allargare diventa **seconda aumentata**. Non è la stessa nota, è lo stesso suono! Quando ti gaserai con la scala minore armonica me ne sarai grato, per adesso stacce.
 
-<Sequence articulation="arpeggio">
-  <Part notes="C3 Eb3"/>
-  <Part notes="C3 D#3"/>
-</Sequence>
+<Score defaultNoteLength='1/2'>
+C_E|C^D
+</Score>
 
 ## Metodo generale di calcolo degli intervalli
 
@@ -145,9 +139,9 @@ Mi-Si: **quinta giusta**.
 
 Ora applichiamo le eventuali alterazioni: abbiamo un bemolle sulla seconda nota, stringiamo l'intervallo: **quinta diminuita**. Contiamo i semitoni al piano se non ci fidiamo!
 
-<Sequence articulation="arpeggio">
-  <Part notes="E3 Bb3"/>
-</Sequence>
+<Score defaultNoteLength='1/2'>
+E_B
+</Score>
 
 Altro esempio, **Sol bemolle-Si-bemolle**. Paesaggio:
 
@@ -159,9 +153,9 @@ Sol La  Si  Do  Re  Mi  Fa  Sol
 
 Sol-Si sarebbe una **terza maggiore**. Bemolle solo sotto allargherebbe a terza aumentata, ma quello sopra la riporta a maggiore, ascoltare per credere:
 
-<Sequence articulation="arpeggio">
-  <Part notes="Gb3 Bb3"/>
-</Sequence>
+<Score defaultNoteLength='1/2'>
+_G_B
+</Score>
 
 :::info[Nota]
 Esistono scenari come Mi bemolle-Sol diesis, dove la terza diventa **più che aumentata** perché l'intervallo è allargato da entrambe le parti. È molto probabile che invece avrete a che fare con Mi bemolle-La bemolle quarta giusta. Idem vale con una doppia riduzione (Re diesis-Sol bemolle), tecnicamente una **quarta più che diminuita**, ma che molto probabilmente sarà Mi bemolle-Sol bemolle terza minore!

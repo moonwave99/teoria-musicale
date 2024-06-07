@@ -5,13 +5,14 @@ import usePaino from "../hooks/usePaino";
 
 export default function Piano({
     notes,
+    startOctave = 3,
     octaves = 3,
     className,
     showActions = true,
     label,
     id,
 }) {
-    const { ref, play } = usePaino({ notes, octaves });
+    const { ref, play } = usePaino({ notes, startOctave, octaves });
     return (
         <div
             className={cx("piano-wrapper", { "show-actions": showActions })}

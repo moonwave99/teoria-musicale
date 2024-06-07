@@ -3,7 +3,7 @@ import { Paino } from "@moonwave99/paino";
 import { parseNotes } from "../lib/utils";
 import soundEngine from "../lib/soundEngine";
 
-export default function usePaino({ notes = "", octaves = 3 }) {
+export default function usePaino({ notes = "", octaves = 3, startOctave = 3 }) {
     const ref = useRef(null);
     const pianoRef = useRef(null);
     const parsedNotes = parseNotes(notes);
@@ -15,10 +15,10 @@ export default function usePaino({ notes = "", octaves = 3 }) {
         pianoRef.current = new Paino({
             el: ref.current,
             octaves,
-            startOctave: 2,
+            startOctave,
         });
         pianoRef.current.render();
-    }, [octaves]);
+    }, [octaves, startOctave]);
 
     useEffect(() => {
         if (parsedNotes) {

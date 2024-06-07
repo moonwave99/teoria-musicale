@@ -85,10 +85,22 @@
   overflow-y: auto;
 }
 
-.button-group {
-  /* margin-left: 1rem;
+.score {
+  margin: 0 0 3rem 0;
+}
+
+.score .controls {
   display: flex;
-  gap: 1rem; */
+  gap: 1rem;
+  align-items: center;
+}
+
+.score .abc-wrapper {
+  margin-top: -2rem;
+}
+
+.score .abcjs-tempo {
+  display: none;
 }
 
 g.abcjs-note.is-playing {
@@ -132,4 +144,13 @@ g.abcjs-note.is-playing {
   position: absolute;
   width: 100%;
   bottom: 0;
+}
+
+.paino .key.color-black.key-on:not(.left),
+.paino .key.color-white.key-on:not(.left) {
+  background-color: var(--ifm-color-primary) !important;
+}
+
+.note-on {
+  fill: var(--ifm-color-primary) !important;
 }

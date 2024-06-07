@@ -50,9 +50,9 @@ Per ora prenderemo in considerazione solo **i tasti bianchi del pianoforte**. Ne
 
 Ascoltiamo:
 
-<Sequence articulation="arpeggio">
-  <Part notes="C3 C4"/>
-</Sequence>
+<Score defaultNoteLength='1/2'>
+Cc
+</Score>
 
 Abbiamo ascoltato la stessa nota, Do, solo che la seconda era più acuta rispetto alla prima. Alcuni di voi sapranno già che il secondo Do era _un'ottava più alto_ rispetto al primo, essendo una nota di **frequenza fondamentale doppia** rispetto all'altra. Chi non conosce l'inizio di [Somewhere Over the Rainbow](https://www.youtube.com/watch?v=V1bFr2SWP1I)? Le prime due note della melodia sono proprio a distanza di ottava.
 
@@ -82,9 +82,9 @@ Diciamo che **la specie** dell intervallo tra Do e Do (o La e La, Mi e Mi...) è
 
 Possiamo prendere in considerazione note a distanza di più ottave:
 
-<Sequence articulation="arpeggio">
-  <Part notes="C3 C5"/>
-</Sequence>
+<Score defaultNoteLength='1/2'>
+Cc'
+</Score>
 
 Diremo che i due Do sono a _due ottave_ di distanza.
 
@@ -102,9 +102,9 @@ Già che ci siamo parliamo dell'intervallo tra una nota e se stessa, senza muove
 
 Facciamo lo stesso giochino con le note Do e Sol:
 
-<Sequence articulation="arpeggio">
-  <Part notes="C3 G3"/>
-</Sequence>
+<Score defaultNoteLength='1/2'>
+CG
+</Score>
 
 Dal tasto nero dopo il Do sino al Sol fanno **sette semitoni** o tre toni e mezzo se preferite. Torniamo al paesaggio dei nomi delle note:
 
@@ -120,9 +120,9 @@ A differenza del conto dei semitoni con i tasti, la nomenclatura numerica **incl
 
 Calcoliamo la distanza tra Mi e Si per ribadire il concetto:
 
-<Sequence articulation="arpeggio">
-  <Part notes="E3 B3"/>
-</Sequence>
+<Score defaultNoteLength='1/2'>
+EB
+</Score>
 
 ```
 Mi  Fa  Sol La  Si  Do  Re  Mi
@@ -134,9 +134,9 @@ Mi-Fa-Sol-La-Si, cinque ancora!
 
 **Importante**: a differenza delle distanze tra le città, gli intervalli **hanno una direzione**! Questo perché il paesaggio dei nomi delle note si può navigare in un senso solo, quindi l'intervallo tra Do e Sol è una quinta (vedi sopra), ma quello tra Sol e Do è invece:
 
-<Sequence articulation="arpeggio">
-  <Part notes="G3 C4"/>
-</Sequence>
+<Score defaultNoteLength='1/2'>
+Gc
+</Score>
 
 ```
 Sol La  Si  Do  Re  Mi  Fa  Sol
@@ -146,9 +146,9 @@ Sol La  Si  Do  Re  Mi  Fa  Sol
 
 Diremo che tra Sol e Do (o tra Si e Mi) c'è **una quarta** per la stessa logica. I più svegli di voi potranno già osservare come una quarta ed una quinta facciano un'ottava di distanza, mentre i meno svegli possono limitarsi a leggerlo come hanno appena fatto, poco male!
 
-<Sequence articulation="arpeggio">
-  <Part notes="C3 G3 C4"/>
-</Sequence>
+<Score defaultNoteLength='1/2'>
+CG|Gc
+</Score>
 
 Ora sappiamo rispondere alla domanda _che intervallo c'è tra Do e Sol_ ad esempio. Un'altra domanda interessante è _chi c'è una quinta sopra il Re_ ad esempio, rispondete esplorando il paesaggio dei nomi!
 
@@ -170,23 +170,21 @@ Le seguenti considerazioni sono equivalenti:
 
 Le considerazioni relative agli intervalli valgono sia per le note suonate assieme che in sequenza. Nel primo caso si tratta di **intervallo armonico**, mentre nell'altro di **intervallo melodico**:
 
-<Sequence>
-  <Part notes="C3 G3"/>
-  <Part notes="C3 G3" articulation="arpeggio"/>
-</Sequence>
+<Score defaultNoteLength='1/2'>
+[CG]2|CG
+</Score>
 
 In caso di intervallo melodico si considera la seconda nota **più acuta rispetto alla prima**, ad esempio tra Sol e Do:
 
-<Sequence articulation="arpeggio">
-  <Part notes="G3 C4"/>
-</Sequence>
+<Score defaultNoteLength='1/2'>
+Gc
+</Score>
 
 In tal caso si parla di **intervallo ascendente**. Se inveece si vuole sapere la distanza tra il Sol e il Do che lo precede, bisogna ricondurre l'intervallo alla sua forma ascendente abbassando la nota più acuta di un ottava, e misurare di conseguenza:
 
-<Sequence articulation="arpeggio">
-  <Part notes="G3 C3"/>
-  <Part notes="C3 G3"/>
-</Sequence>
+<Score defaultNoteLength='1/2'>
+Gc|CG
+</Score>
 
 Questa considerazione è assai importante perché altrimenti si è tentati di dire che la distanza tra Do e Sol sia sempre di quinta, quanto invece l'ordine in cui li si prende in considerazione è importante:
 
@@ -201,9 +199,9 @@ Tastiera alla mano e farsi i conti invece di leggere!
 
 Abbiamo visto come tra Do e Sol ci sia una quinta. Il bello è che esistono vari tipi di quinte! Se avete fatto l'esplorazione suggerita vi sarete imbattuti in una quinta un po' speciale. Innanzitutto ribadiamo perché è quinta:
 
-<Sequence articulation="arpeggio">
-  <Part notes="B2 F3"/>
-</Sequence>
+<Score defaultNoteLength='1/2'>
+B,F
+</Score>
 
 ```
 Si  Do  Re  Mi  Fa  Sol La
@@ -251,17 +249,17 @@ Unisono poverino non si trova mai mentre l'ottava si modifica rarissimamente, qu
 
 Ma il Si poverino non ha nessuno una quinta (giusta) sopra di lui? Non nei tasti bianchi almeno, per fortuna esiste il Fa diesis:
 
-<Sequence articulation="arpeggio">
-  <Part notes="B2 F#3"/>
-</Sequence>
+<Score defaultNoteLength='1/2'>
+B,^F
+</Score>
 
 Sono di nuovo sette semitoni, approfondiremo presto.
 
 Se invece di stringere l'intervallo lo allargassimo (i.e. lo portassimo a quattro toni), avremmo una _quinta aumentata_. La collezione dei tasti bianchi del pianoforte non offre quinte aumentate purtroppo, se siete curiosi ascoltate lo stesso scomodando un tasto nero:
 
-<Sequence articulation="arpeggio">
-  <Part notes="C3 G#3"/>
-</Sequence>
+<Score defaultNoteLength='1/2'>
+C^G
+</Score>
 
 A breve vedremo cosa accade con le alterazioni, e potremo manipolare tutti gli intervalli. Per adesso sappiamo che sui tasti bianchi abbiamo solo quarte e quinte giuste, nessuna quinta aumentata ed una quinta diminuita o tritono tra Si e Fa, che non è poco.
 
