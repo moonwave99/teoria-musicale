@@ -59,6 +59,12 @@ export default function Score({
         <figure className="score alert alert--secondary" id={id}>
             <div className="abc-wrapper" ref={ref}></div>
             <div className="controls">
+                <button
+                    className="button button--sm button--primary"
+                    onClick={onClick}
+                >
+                    {isPlaying ? "Stop" : "Play"}
+                </button>
                 {showPiano && (
                     <Piano
                         showActions={false}
@@ -66,12 +72,7 @@ export default function Score({
                         octaves={octaves}
                     />
                 )}
-                <button
-                    className="button button--sm button--primary"
-                    onClick={onClick}
-                >
-                    {isPlaying ? "Stop" : "Play"}
-                </button>
+
                 {/* <div className="button-group">
                     <button
                         className="button button--sm button--primary"

@@ -93,6 +93,10 @@
   display: flex;
   gap: 1rem;
   align-items: center;
+
+  button {
+    width: 5rem;
+  }
 }
 
 .score .abc-wrapper {
