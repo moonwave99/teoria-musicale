@@ -54,11 +54,21 @@ Le note delle scale minori e maggiori si chiamano **gradi della scala** e sono c
 
 ## I tasti bianchi del pianoforte
 
-Ragazzi, le basi di teoria si imparano coi tasti bianchi del pianoforte, poco me ne vogliano i chitarristi o i violinisti. Chiunque può prendere un Do maggiore su una tastiera! Pollice destro sul tasto bianco prima dei due tasti neri, medio due tasti bianchi dopo, mignolo due tasti dopo ancora: Do-Mi-Sol! In bocca al lupo a far lo stesso con una chitarra magari con le corde di metallo al primo colpo. Non c'è niente di particolarmente speciale intorno al Do maggiore, è semplicemente la collezione di note più facile da individuare sullo strumento e da leggere sul pentagramma visto che non contiene alcuna alterazione.
+Ragazzi, le basi di teoria si imparano al pianoforte, poco ce ne vogliano i chitarristi o i violinisti. Chiunque può prendere un Do maggiore su una tastiera! Pollice destro sul tasto bianco prima dei due tasti neri, medio due tasti bianchi dopo, mignolo due tasti dopo ancora: Do-Mi-Sol! In bocca al lupo a far lo stesso con una chitarra al primo colpo.
 
-Ascoltiamo finalmente un paio di esempi di robe in Do maggiore che già sicuramente conosceremo:
+Non c'è niente di particolarmente speciale riguardo al Do maggiore, è semplicemente la collezione di note più facile da individuare sullo strumento e da leggere sul pentagramma visto che non contiene alcuna alterazione.
 
-{/* Bach - Prelude in C major */}
+Ascoltiamo finalmente un paio di esempi di robe in Do maggiore sicuramente già noti:
+
+<Score defaultNoteLength="1/16" tempo={75} startOctave={3} octaves={3}>
+T: J.S. Bach, Preludio in Do maggiore, BWV 846
+%%score V1 (B1 B2)
+V: V1 clef=treble
+V: B1 clef=bass
+[V: V1]z2 Gce Gce z2 Gce Gce|z2 Adf Adf z2 Adf Adf|z2 Gdf Gdf z2 Gdf Gdf|z2 Gce Gce z2 Gce Gce||
+[V: B1]z E3-E4 z E3-E4      |z D3-D4 z D3-D4      |z D3-D4 z D3-D4      |z E3-E4 z E3-E4      ||
+[V: B2]C8 C8                |C8 C8                |B,8 B,8              |C8 C8                ||
+</Score>
 
 <Score defaultNoteLength="1/8" tempo={220} meter="6/8" startOctave={2} octaves={5}>
 T: Gino Paoli - La gatta
@@ -200,11 +210,13 @@ Sentite come è la stessa idea musicale del Do-Sol-Do? Stavolta abbiamo suonato 
 
 Se tornate poi ad ascoltare gli esempi precedenti di Vivaldi o Gino Paoli o Bach, noterete come le frasi iniziano con Do e terminano col Sol. Certo non si tratta di accordi secchi ma di arpeggi e melodie, ma il senso musicale è lo stesso (altrimenti la musica suonerebbe tutta uguale!).
 
-Spesso ci si riferisce alle cadenze in base ai gradi che esse contengono: Sol > Do, dominante > tonica, _quinto > primo_, o in numeri romani V-I.
+Spesso ci si riferisce alle cadenze in base ai gradi che esse contengono: Sol > Do, dominante > tonica, _quinto > primo_, o in numeri romani V-I. Si dice infine che _il Sol risolve al Do_, o che la dominante risolve sulla tonica - che non vuol affatto dire che una tipa in latex preferisca un cocktail senza il gin, mi raccomando!
 
 ## Conclusione
 
-Abbiamo incontrato un sacco di bella roba: accordi, gatte, triadi, Vivaldi, accidenti, cadenze perfette. Che volete di più? Tenete a mente che il linguaggio musicale si è evoluto attraverso i secoli e i continenti, ed è quindi pieno di incongruenze. I tentativi di riformarlo e renderlo coerente sono innumerevoli, e sono finiti tutti come l'esperanto, utopico esperimento di rinnovamento linguistico terminato come esercizio di stile sepolto dalla generazione del _cringe_ e della repulsione per i _boomer_. Siate invece pronti ad abbracciarne ogni sfumatura, dalle note in italiano al gergo sassone, dai termini della musica classica a quella popolare. Buon ascolto e buono studio!
+Abbiamo incontrato un sacco di bella roba: accordi, gatte, triadi, Vivaldi, accidenti, cadenze perfette. Che volete di più? Tenete a mente che il linguaggio musicale si è evoluto attraverso i secoli e i continenti, ed è quindi pieno di incongruenze. I tentativi di riformarlo e renderlo coerente sono innumerevoli, e sono finiti tutti come l'esperanto, utopico esperimento di rinnovamento linguistico terminato come esercizio di stile sepolto dalla generazione del _cringe_ e della repulsione per i _boomer_. Siate invece pronti ad abbracciarne ogni sfumatura, dalle note in italiano al gergo sassone, dai termini della musica classica a quella popolare. 
+
+Buon ascolto e buono studio!
 
 ---
 
@@ -212,4 +224,17 @@ Abbiamo incontrato un sacco di bella roba: accordi, gatte, triadi, Vivaldi, acci
 
 Dei seguenti frammenti, individua le cadenze perfette:
 
-WIP
+<Score meter="3/4" defaultNoteLength="1/4" tempo={60} startOctave={2} octaves={5}>
+V: V1 clef=treble
+V: V2 clef=bass
+[V: V1][D^F] [DG] z    ||[CFA] [CEG] z||
+[V: V2][D,A,] [G,,B,] z||[C,]  [C,]  z||
+</Score>
+
+<details>
+  <summary>Soluzioni</summary>
+| # |                            |
+|---|----------------------------|
+| 1 | Cadenza perfetta, Re > Sol |
+| 2 | Fa (in 2a inversione) > Do, vedremo che si chiama _cadenza plagale_ |
+</details>
