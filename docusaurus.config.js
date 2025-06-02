@@ -34,7 +34,7 @@ const config = {
                 blog: {
                     blogSidebarCount: 0,
                     truncateMarker: new RegExp("<Truncate/>"),
-                    routeBasePath: "/articles",
+                    routeBasePath: "/lezioni",
                 },
             }),
         ],
