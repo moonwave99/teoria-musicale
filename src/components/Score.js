@@ -1,4 +1,4 @@
-import React, { useId, Children } from "react";
+import React, { useState, useId, Children } from "react";
 import Piano from "../components/Piano";
 import useAbcPlayer from "../hooks/useAbcPlayer";
 
@@ -17,6 +17,7 @@ export default function Score({
     children,
     showPiano = true,
 }) {
+    const [isPlaying, setPlaying] = useState(false);
     const id = useId();
     const abcString = getABCString(children);
 
@@ -45,6 +46,15 @@ export default function Score({
         });
     }
 
+    function onClick() {
+        if (isPlaying) {
+            stop();
+        } else {
+            toggle();
+        }
+        setPlaying((prev) => !prev);
+    }
+
     return (
         <figure className="score alert alert--secondary" id={id}>
             <div className="abc-wrapper" ref={ref}></div>
@@ -56,7 +66,13 @@ export default function Score({
                         octaves={octaves}
                     />
                 )}
-                <div className="button-group">
+                <button
+                    className="button button--sm button--primary"
+                    onClick={onClick}
+                >
+                    {isPlaying ? "Stop" : "Play"}
+                </button>
+                {/* <div className="button-group">
                     <button
                         className="button button--sm button--primary"
                         onClick={toggle}
@@ -69,7 +85,7 @@ export default function Score({
                     >
                         Stop
                     </button>
-                </div>
+                </div> */}
             </div>
         </figure>
     );

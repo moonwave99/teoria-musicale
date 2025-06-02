@@ -103,6 +103,7 @@ class Engine {
         this._onBeatsChange(-1);
     }
     _onBeatsChange(beatNumber) {
+        return;
         const measure = Math.floor(beatNumber / this._meter.num);
         document
             .querySelectorAll(`#${CSS.escape(this._id)} .abcjs-note`)
@@ -117,7 +118,7 @@ class Engine {
         document
             .querySelectorAll(`#${CSS.escape(this._id)} [data-midi]`)
             .forEach((el) => el.classList.remove("key-on"));
-        notes.forEach((note) => {
+        notes?.forEach((note) => {
             const el = document.querySelector(
                 `#${CSS.escape(this._id)} [data-midi="${note}"]`
             );
