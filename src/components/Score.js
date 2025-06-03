@@ -1,6 +1,8 @@
 import React, { useState, useId, Children } from "react";
 import Piano from "../components/Piano";
 import useAbcPlayer from "../hooks/useAbcPlayer";
+import { FaPlay, FaStop } from "react-icons/fa";
+import cx from "clsx";
 
 function getABCString(children) {
     const child = Children.toArray(children)?.at(0);
@@ -60,34 +62,21 @@ export default function Score({
             <div className="abc-wrapper" ref={ref}></div>
             <div className="controls">
                 <button
-                    className="button button--sm button--primary"
+                    className={cx("button-playback", { isPlaying })}
                     onClick={onClick}
+                    aria-label="Toggle playback"
                 >
-                    {isPlaying ? "Stop" : "Play"}
+                    <FaStop className="icon-stop" />
+                    <FaPlay className="icon-play" />
                 </button>
-                {showPiano && (
-                    <Piano
-                        showActions={false}
-                        startOctave={startOctave}
-                        octaves={octaves}
-                    />
-                )}
-
-                {/* <div className="button-group">
-                    <button
-                        className="button button--sm button--primary"
-                        onClick={toggle}
-                    >
-                        Play
-                    </button>
-                    <button
-                        className="button button--sm button--primary"
-                        onClick={stop}
-                    >
-                        Stop
-                    </button>
-                </div> */}
             </div>
+            {showPiano && (
+                <Piano
+                    showActions={false}
+                    startOctave={startOctave}
+                    octaves={octaves}
+                />
+            )}
         </figure>
     );
 }

@@ -79,7 +79,7 @@ class Engine {
         this._synth.start();
         this._timings.start();
         this._isPlaying = true;
-        this._updateButtonText("Pause");
+        this._updateButtonStatus("playing");
     }
     pause() {
         if (!this._isPlaying) {
@@ -88,7 +88,7 @@ class Engine {
         this._synth.pause();
         this._timings.pause();
         this._isPlaying = false;
-        this._updateButtonText("Play");
+        this._updateButtonStatus("stopped");
     }
     stop() {
         if (!this._isPlaying) {
@@ -98,7 +98,7 @@ class Engine {
         this._timings.pause();
         this._timings.reset();
         this._isPlaying = false;
-        this._updateButtonText("Play");
+        this._updateButtonStatus("stopped");
         this._onNotesChange([]);
         this._onBeatsChange(-1);
     }
@@ -128,14 +128,19 @@ class Engine {
             el.classList.add("key-on");
         });
     }
-    _updateButtonText(text) {
+    _updateButtonStatus(status) {
         const button = document.querySelector(
-            `#${CSS.escape(this._id)} .controls button`
+            `#${CSS.escape(this._id)} .controls .button-playback`
         );
         if (!button) {
             return;
         }
-        button.innerText = text;
+        if (status === "playing") {
+            document
+                .querySelectorAll(".button-playback.isPlaying")
+                .forEach((el) => el.classList.remove("isPlaying"));
+            button.classList.add("isPlaying");
+        }
     }
 }
 

@@ -100,10 +100,15 @@
 }
 
 .score {
-  margin: 0 0 3rem 0;
+  margin: 3rem 0 2rem 0;
+  position: relative;
 }
 
 .score .controls {
+  --button-size: 3rem;
+  position: absolute;
+  top: calc(var(--button-size) / -2);
+  left: calc(var(--button-size) / -2);
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -113,8 +118,45 @@
     gap: .5rem;
   }
 
-  button {
-    width: 5rem;
+  .button-playback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: var(--button-size);
+    height: var(--button-size);
+
+    transition: background .2s ease-in-out;
+
+    svg {
+      transition: scale .2s ease-in-out;
+    }
+
+    &:hover {
+      background-color: #1fa588;
+
+      svg {
+        scale: 1.2;
+      }
+    }
+
+    .icon-stop {
+      display: none;
+    }
+
+    .icon-play {
+      display: block;
+    }
+
+    &.isPlaying {
+      .icon-stop {
+        display: block;
+      }
+
+      .icon-play {
+        display: none;
+      }
+    }
   }
 }
 
