@@ -58,6 +58,20 @@
   margin: 0;
 }
 
+.piano-wrapper {
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
+
+.paino {
+  @media screen and (max-width: 600px) {
+    overflow-x: visible !important;
+    width: auto !important;
+  }
+}
+
 .piano-wrapper.show-actions {
   display: flex;
   gap: 1rem;
@@ -93,6 +107,11 @@
   display: flex;
   gap: 1rem;
   align-items: center;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    gap: .5rem;
+  }
 
   button {
     width: 5rem;
