@@ -102,7 +102,10 @@ class Engine {
         this._onNotesChange([]);
         this._onBeatsChange(-1);
     }
-    _onBeatsChange(beatNumber) {
+    _onBeatsChange(beatNumber, totalBeats) {
+        if (beatNumber === totalBeats) {
+            this._updateButtonStatus("stopped");
+        }
         return;
         const measure = Math.floor(beatNumber / this._meter.num);
         document
@@ -140,7 +143,9 @@ class Engine {
                 .querySelectorAll(".button-playback.isPlaying")
                 .forEach((el) => el.classList.remove("isPlaying"));
             button.classList.add("isPlaying");
+            return;
         }
+        button.classList.remove("isPlaying");
     }
 }
 
