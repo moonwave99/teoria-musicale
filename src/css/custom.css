@@ -219,3 +219,44 @@ g.abcjs-note.is-playing {
 .note-on {
   fill: var(--ifm-color-primary) !important;
 }
+
+.interval-trainer {
+  background-color: rgba(120, 120, 120, .3);
+  padding: 2rem;
+  border-radius: .25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .question {
+    display: flex;
+    gap: .25rem;
+    font-size: 2rem
+  }
+
+  .solution {
+    display: none;
+
+    &.showSolution {
+      display: inline;
+    }
+  }
+
+  .actions {
+    display: flex;
+    gap: 1rem;
+
+    button {
+      padding: .5rem;
+    }
+  }
+
+  .note,
+  .solution {
+    font-weight: bold;
+    background-color: var(--ifm-color-primary-darker);
+    padding: 0 .75rem;
+    border-radius: .25rem;
+    color: white;
+  }
+}

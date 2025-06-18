@@ -1,0 +1,89 @@
+---
+slug: il-paesaggio-dei-nomi-delle-note
+title: Il paesaggio dei nomi delle note
+tags: [teoria]
+---
+
+import IntervalTrainer from '../src/components/IntervalTrainer';
+
+Prima di passare agli intervalli, definiamo il concetto di **distanza tra i nomi delle note**. Lasciamo perdere la musica per un momento: il nostro obiettivo per ora è quello di associare **un numero ordinale declinato al femminile** ad ogni coppia di note.
+
+<Truncate/>
+
+Se può aiutare, si visualizzi il seguente schema:
+
+```
+Do  Re  Mi  Fa  Sol La  Si  Do
+.   .   .   .   .   .   .   .
+```
+
+Abbiamo già incontrato nelle lezioni precedenti espressioni quali:
+
+- tra Do e Mi c'è **una terza**;
+- tra Do e Sol c'è **una quinta**;
+- tra Do e il Do successivo c'è **un'ottava**.
+
+Cosa deduciamo da questi esempi?
+
+- Do, Re, Mi -> tre note, **terza**;
+- Do, Re, Mi, Fa, Sol -> cinque note, **quinta**;
+- Do, Re, Mi, Fa, Sol, La, Si, Do -> otto note, **ottava**.
+
+Possiamo quindi dire che:
+
+> **La distanza tra i nomi di due note si misura contando dalla nota di partenza a quella di arrivo, entrambe comprese.**
+
+Quanti conti! Sembra difficile solo all'inizio: un musicista allenato conosce a memoria tutti gli intervalli perché li ha suonati per ore! Sul pianoforte ad esempio è davvero facile perché lo strumento è stato creato apposta, ma chi suona strumenti a fiato o canta deve impegnarsi un po' di più.
+
+**Importantissimo**: ancora non abbiamo aggiunto qualificativi come _terza minore_ o _terza maggiore_, ma se facciamo entrambe le cose assieme impazziamo.
+
+Restiamo ancora sui nomi delle note, espandiamo il paesaggio a due ottave così possiamo partire da dove vogliamo. Mi raccomando niente tasti, niente alterazioni, niente semitoni, niente di niente: solo paesaggio delle sette note!
+
+```
+Do  Re  Mi  Fa  Sol La  Si  Do  Re  Mi  Fa  Sol La  Si  Do
+.   .   .   .   .   .   .   .   .   .   .   .   .   .   .
+```
+
+| Da  | A   | Percorso                    | Distanza |
+| --- | --- | --------------------------- | -------- |
+| Fa  | Do  | Fa, Sol, La, Si, Do         | Quinta   |
+| Re  | Mi  | Re, Mi                      | Seconda  |
+| Si  | Fa  | Si, Do, Re, Mi, Fa          | Quinta   |
+| Sol | Do  | Sol, La, Si, Do             | Quarta   |
+| Mi  | Re  | Mi, Fa, Sol, La, Si, Do, Re | Settima  |
+| La  | Do  | La, Si, Do                  | Terza    |
+| Do  | La  | Do, Re, Mi, Fa, Sol, La     | Sesta    |
+
+Fantastico! Godetevi altri cinque minuti il paesaggio delle note e fate ulteriori considerazioni personali, appena fatto proseguiamo:
+
+- la distanza tra una nota e se stessa si chiama **unisono**;
+- la distanza tra una nota quella seguente avente lo stesso nome si chiama **ottava**.
+
+Come facciamo a distingue l'ottava dall'unisono? Essendo intervalli ovvi sia acusticamente che graficamente, non si fanno mai grosse considerazioni a loro riguardo in tema di intervalli.
+
+**Importante**: la distanza tra i nomi di due note si intende **in senso ascendente** se non diversamente specificato, torniamo agli ultimi due esempi:
+
+- tra Do e La c'è **una sesta**;
+- tra La e Do c'è **una terza**.
+
+Similmente:
+
+- tra Do e Sol c'è **una quinta**;
+- tra Sol e Do c'è **una quarta**;
+- tra Re e Mi c'è **una seconda**;
+- tra Mi e Re c'è **una settima**.
+
+Fermi un attimo: 6 e 3, 4 e 5, 2 e 7...la somma fa sempre nove! Esatto, esistono tre coppie di **intervalli reciproci** che sommati danno l'ottava, provare per credere:
+
+- Do-La (sesta) + La-Do (terza) = Do-Do (ottava);
+- Re-Mi (seconda) + Mi-Re (settima) = Re-Re (ottava).
+
+Non diventateci matti per ora, sono semplicemente constatazioni che possono aiutarvi. Io consiglierei di farvi un altro giretto lungo il paesaggio dei nomi delle note (no tasti, no accidenti), e di proseguire domani con il resto della lezione.
+
+---
+
+## Esercizi
+
+Giocate un po' al giochino qui sotto:
+
+<IntervalTrainer/>
