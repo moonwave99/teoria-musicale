@@ -238,7 +238,7 @@ g.abcjs-note.is-playing {
     display: none;
 
     &.showSolution {
-      display: inline;
+      display: contents;
     }
   }
 
@@ -252,7 +252,7 @@ g.abcjs-note.is-playing {
   }
 
   .note,
-  .solution {
+  .interval {
     font-weight: bold;
     background-color: var(--ifm-color-primary-darker);
     padding: 0 .75rem;
